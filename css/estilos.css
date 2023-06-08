@@ -1,0 +1,12 @@
+/* Estilos para todos */
+body {
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* configuracion */
+/* ayuda */
+/* idioma */
+/* micuenta */
