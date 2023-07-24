@@ -90,13 +90,12 @@ button {
     width: 250px;
 }
 
-.contenedor-info {
+.contenedor-info, .imagenArriba {
     margin-left: 100px;
     display: flex;
-    flex-direction: column;
     border: 1px solid;
     flex-wrap: nowrap;
-    width:  100%;
+    /* width:  100%; */
     height: auto;
 }
 
@@ -107,11 +106,11 @@ button {
     display: flex;
     width: 100%;
 }
-.contenedor-a section {
-    border: 1px solid;
-    display: flex;
+/* .contenedor-a section { */
+    /* border: 1px solid; */
+    /* display: flex; */
     /* flex-direction: column; */
-}
+/* } */
 
 button {
     display: none;
