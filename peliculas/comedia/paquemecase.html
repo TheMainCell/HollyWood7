@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>DBS Broly | HollyWood7</title>
-    <link rel="icon" href="../../favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pa' que me case | HW7</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="imagenes/logoFavicon/faviconHW7.jpg">
 </head>
-<body>
-    <div id="contenedor">
-        <header>
+
+<body class="body-inicio">
+    <main class="main-contendor">
+        <header class="contenedor-header">
             <figure>
-                <img src="../../logo.png" alt="Logo">
+                <a href="index.html"><img src="../../logo.png" alt=""></a>
             </figure>
+
+            <nav class="contenedor-nav">
+                <ul class="navMenu">
+                    <li id="arrowLeft"><a href="#paginaPrincipal"><img src="../../navegacion/back.png" alt="" width="50"
+                                height="50"></a></li>
+                    <li id="home"><a href="#paginaHome"><img src="../../navegacion/house.png" alt="" width="50"
+                                height="50"></a></li>
+                    <li id="menu"><a href="#configuracion"><img src="../../navegacion/barra.png" alt="" width="50"
+                                height="50"></a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <figure id="pelicula">
-                <img src="../../imagenes/caratulas/comedia/Pa-que-me-case-(2016).jpeg" alt="Pa-que-me-case">
-            </figure>
-            <h3>Género</h3>
-            <p>Comedia</p>
-            <h3>Clasificación</h3>
-            <p>R/14</p>
-            <h3>Protagonistas</h3>
-            <p>Fausto Mata, Cheddy García, Freddyn Beras Goico, Techy Fatule, Liz Soto, Carlos de la Mota</p>
-            <h3>Escritores</h3>
-            <p>Cheddy García, Carlos de la Mota, Freddyn Beras Goico</p>
-            <button>Ver Trailer</button>
-            <button>Comprar Ticket</button>
-        </main>
-        <footer>
-            <nav id="Navegación">
+
+        <div class="contendor-info">
+            <div class="imagenArriba">
                 <figure>
-                    <a href="#"><img src="../../imagenes/navegacion/barra.png" alt="Barra"></a>
-                    <a href="#"><img src="../../imagenes/navegacion/house.png" alt="House"></a>
-                    <a href="#"><img src="../../imagenes/navegacion/back.png" alt="Back"></a>
+                    <img src="../../imagenes/caratulas/comedia/Pa-que-me-case-(2016).jpeg" alt="Pa'Que me case">
                 </figure>
-        </footer>
-    </div>
+            </div>
+
+            <section class="info">
+                <h4 class="titulo-pelicula">Pa' Que me Case</h4>
+                <h3 class="sub-temas">Genero:</h3>
+                <p class="texto">Comedia</p>
+                <h3 class="sub-temas">Clasificacion:</h3>
+                <p class="texto">R/14</p>
+                <h3 class="sub-temas">Protagonistas:</h3>
+                <p class="texto">Fausto Mata, Cheddy García, Freddyn Beras Goico, Techy Fatule, Liz Soto, Carlos de la Mota</p>
+                <h3 class="sub-temas">Escritores:</h3>
+                <p class="texto">Cheddy García, Carlos de la Mota, Freddyn Beras Goico</p>
+            </section>
+
+            <section class="contenedor-trailerTicket">
+                <div class="contendor-trailer">
+                    <figure>
+                        <a href="#vertrailer"><img src="../../navegacion/play.svg" alt="" width="50" height="50"></a>
+                    </figure>
+                    <button type="button">Ver Trailer</button>
+                </div>
+
+                <div class="contendor-ticket">
+                    <figure>
+                        <a href="#comprarTicket"><img src="../../navegacion/ticket.svg" alt="" width="50"
+                                height="50"></a>
+                    </figure>
+                    <button type="button">Comprar ticket</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
 </body>
+
 </html>

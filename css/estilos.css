@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Pantall principal */
+body {
+    background-color: #000;
+}
+
+.estrenos, .accion, .comedia, .heroe, .animacion {
+    display: flex;
+    grid-area: estreno;
+    width: 100%;
+}
+
+.header-principal {
+    grid-area: cabeza;
+    background: url(../imagenes/the-batman-dc-darkness-4k-0o-1920x1080.jpg) no-repeat;
+    background-size: cover ;
+    background-position: center center;
+    height: 500px;
+    /* width: 900px; */
+}
+
+footer {
+    grid-area: pie;
+}
+
+.pelicula {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.logo {
+    position: relative;
+    width: 50px;
+}
+
+.imagen-logo {
+    right: -100px;
+    width: 175px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.caratula {
+    height: 400px;
+    width: 280px;
+    
+}
+
+h1, h2, h3, h4, p, a {
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    text-align: start;
+    margin-left: 50px;
+}
+
+p{
+    font-size: 22px;
+}
+
+.p-texto {
+    text-align: justify;
+}
+
+button {
+    left: 580px;
+    top: 250px;
+    padding: 10px;
+    position: relative;
+    margin-left: 4px;
+}
+
+
+/* PÁGINAS IDIVIDUALES */
+
+.contenedor-header {
+    background: none;
+}
+
+.logo-individual {
+    width: 250px;
+}
+
+.contenedor-info {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    flex-wrap: nowrap;
+    width:  100%;
+    height: auto;
+}
+
+.contenedor-a {
+    display: flex;
+    /* flex-direction: row; */
+    border: 4px solid white;
+    display: flex;
+    width: 100%;
+}
+.contenedor-a section {
+    border: 1px solid;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+button {
+    display: none;
+}
+
+.imagenArriba {
+    width: 100%;
+}
+
+.info {
+    margin-left: 60px;
+}
+
+.imagen {
+    width: 400px;
+}
+
+.contenedor-nav {
+    display: none;
+}
+
+.contenedor-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 100%;
+}
+
+.contenedor-trailerTicket {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    float: right;
+    /* width: 100%; */
+    /* top: 500px;  */
+    /* right: 400px; */
+ }
+
+
+.contenedor-trailer, .contenedor-ticket {
+    position: relative;
+    display: block;
+    float: right;
+    align-content: space-around;
+    justify-content: space-around;
+} 
+
+.ver {
+    display: block;
+    position: relative;
+    left: 17px;
+    top: 0;
+} 
+
+.botones {
+    display: flex;
+    position: absolute;
+    
+} 
+
+.boton {
+    display: block;
+}
