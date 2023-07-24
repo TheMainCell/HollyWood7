@@ -140,9 +140,9 @@ button {
 
 .contenedor-trailerTicket {
     position: relative;
-    display: block;
+    display: flex;
     margin: 0 auto;
-    float: right;
+    /* float: right; */
     /* width: 100%; */
     /* top: 500px;  */
     /* right: 400px; */
@@ -151,10 +151,10 @@ button {
 
 .contenedor-trailer, .contenedor-ticket {
     position: relative;
-    display: block;
-    float: right;
-    align-content: space-around;
-    justify-content: space-around;
+    display: flex;
+    /* float: right; */
+    /* align-content: space-around; */
+    /* justify-content: space-around; */
 } 
 
 .ver {
@@ -166,12 +166,17 @@ button {
 
 .botones {
     display: flex;
-    position: absolute;
+    position: relative;
+    align-content: center;
+    justify-content: center;
     
 } 
 
 .boton {
-    display: block;
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .texto, .sub-temas,.titulo-pelicula {
