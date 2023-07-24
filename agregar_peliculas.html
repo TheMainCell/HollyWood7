@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Agregar peliculas</title>
+    <link rel="stylesheet" href="/css/estilos.css">
 </head>
-<body>
-    <header>
+<body class="body_agregar_pelicula">
+    <!-- header donde almacenare el logo y la imagen de donde se hara el login -->
+    <header class="header_agregar_pelicula">
         <figure>
-            <img src="imagenes/logo/logo.png">
+            <img class="logo_agregar_peliculas" src="imagenes/logo/logo.png">
         </figure>
     </header>
 
-    <main>
-    
+    <main class="main_agregar_pelicula">
+
+    <div class="formulario_agregar_pelicula">
+
+    <!-- formulario donde se estara la informacion a llenar por los usuarios -->
     <form>
+    <form class="fondo_formulario">
 
-        <input type="text" required placeholder="Nombre">
+        <input class="nombre_agregar_pelicula" type="text" required placeholder="Nombre">
         <br>
 
-        <input type="text" required placeholder="Género">
+        <input class="genero_genero_pelicula" type="text" required placeholder="Género">
         <br>
 
-        <input type="text" required placeholder="Clasificación">
+        <input class="clasificacion_agregar_pelicula" type="text" required placeholder="Clasificación">
         <br>
 
-        <input type="text"required placeholder="Escritores">
+        <input class="escritores_agregar_pelicula" type="text"required placeholder="Escritores">
         <br>
 
-        <input type="text" required placeholder="Protagonistas">
+        <input class="protagonistas_agregar_pelicula" type="text" required placeholder="Protagonistas">
         <br>
 
-        <input type="text" required placeholder="Sinopsis">
+        <input class="sinopsis_agregar_pelicula" type="text" required placeholder="Sinopsis">
         
     </form>
+    </div>
 
+    <!-- aqui es donde se podra agregar peliculas y portada, son los iconos para ejecutar la accion -->
+    <div class="peliculas_agregar">
     <figure>
-        <img src="imagenes/admin iconos/agregar.png" width="10%">
-        <img src="imagenes/admin iconos/tableta.png" width="10%">
+        <img class="agregar_agregar_pelicula" src="imagenes/admin iconos/guardar_original.png" width="10%">
+        <img class="tableta_agregar_pelicula" src="imagenes/admin iconos/tableta.png" width="10%">
     </figure>
-    
+    </div>
 </main>
 
-<footer>
 
-    <figure>
+<!-- esto se utilizara mas adelante de momento esta comentado son diversos iconos que tendran una funcion
+     espesifica -->
+     
+<footer class="footer_agregar_peliculas">
+
+    <!-- <figure>
         <img src="imagenes/navegacion/barra.png" width="10%">
         <img src="imagenes/navegacion/house.png" width="10%">
         <img src="imagenes/navegacion/back.png" width="10%">
-    </figure>
+    </figure> -->
     
 </footer>
 

@@ -1,0 +1,391 @@
+/* inicio sesion */
+
+.login { 
+    background: url(/imagenes/estrellas/nose.jpg);
+    background-repeat: repeat;
+    background-color: black;
+}
+
+
+.logo {
+    background-color: white;
+    width: 190px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    overflow: hidden;
+    margin: 70px 100px;
+}
+
+
+.main_login {
+    display: grid;
+    grid-template-areas: 
+        "" "header" ""
+        ""  "form" "";
+    justify-content: center;
+    margin-left: 600px;
+}
+
+form{
+    display: grid;
+    justify-content: start ;
+}
+
+.usuario{
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 330px;
+    left: 862px;
+
+}
+
+.contraseña {
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 390px;
+    left: 862px;
+}
+
+.sesion {
+    border-radius: 5px;
+    font-size: 17px;
+    position: absolute;
+    top: 440px;
+    left: 915px;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin: 7px 80px;
+    position: absolute;
+    top: 490px;
+}
+
+.olvide {
+    position: absolute;
+    top: 490px;
+    margin-left: 170px;
+}
+
+.cell {
+    position: absolute;
+    top: 160px;
+    right: 720px;
+    width: 480px;
+    border-radius: 60%;
+    
+}
+
+.facebook_mover {
+    position: absolute;
+    top: 376px;
+    left: 160px;
+}
+
+.facebook {
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+}
+
+.instagram_mover {
+    position: absolute;
+    top: 389px;
+    left: 275px;
+}
+
+.instagram {
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+}
+
+.twitter_mover {
+    position: absolute;
+    top: 374px;
+    left: 390px;
+}
+
+.twitter {
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+}
+
+/* registro */
+
+.usuario_registro {
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 345px;
+    left: 862px;
+
+}
+
+.contraseña_registro {
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 395px;
+    left: 862px;
+}
+
+.nombre {
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 7px 120px;
+    position: absolute;
+    top: 290px;
+}
+
+.clave {
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 7px 120px;
+    position: absolute;
+    top: 440px;
+}
+
+.registro_registro {
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 510px;
+    left: 915px;
+}
+/* recuperar cuenta */
+
+.usuario_recuperar {
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 345px;
+    left: 862px;
+
+}
+
+.contraseña_recuperar {
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 395px;
+    left: 862px;
+}
+
+.correo {
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 7px 120px;
+    position: absolute;
+    top: 290px;
+}
+
+.clave {
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 7px 120px;
+    position: absolute;
+    top: 440px;
+}
+
+.recuperar_recuperar {
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 510px;
+    left: 915px;
+}
+
+/* ADMIN */
+
+.admin {
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.header_admin {
+    display: flex;
+    justify-content: center;
+}
+
+.logo_admin {
+    background-color: white;
+    border-radius: 50%;
+    width: 300px;
+    left: 490px ;
+    top: 5px;
+    padding: 9px;
+    
+}
+
+.titulo_principal {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.textos_agregar{
+    position: absolute;
+    left: 220px;
+    top: 740px;
+}
+
+.agregar_admin {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    position: absolute;
+    left: 250px;
+    top: 580px
+}
+
+.textos_borrar {
+    position: absolute;
+    right: 220px;
+    top: 740px;
+}
+
+.borrar_admin {
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    padding: 5px;
+    right: 250px;
+    top: 580px
+}
+
+.footer_admin {
+    top: 390px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navegacion_menu {
+    width: 90px;
+}
+
+.inicio_menu {
+    width: 90px;
+}
+
+.atras_menu {
+    width: 90px;
+}
+
+/* AGREGAR PELICULA */
+
+.body_agregar_pelicula {
+    background-color: black;
+}
+
+.logo_agregar_peliculas {
+    border-radius: 50%;
+    width: 300px;
+    background-color: white;
+}
+
+.header_agregar_pelicula {
+    display: flex;
+    justify-content: center;
+}
+
+.formulario_agregar_pelicula {
+    display: grid;
+    justify-content: center;
+}
+
+.nombre_agregar_pelicula {
+    font-size: 18px;
+    margin: 5px;
+    position: absolute;
+    top: 390px;
+    left: 360px;
+}
+
+.genero_genero_pelicula {
+    font-size: 18px;
+    margin: 5px;
+    position: absolute;
+    top: 390px;
+    right: 320px ;
+}
+
+.clasificacion_agregar_pelicula {
+    font-size: 18px;
+    margin: 5px;
+    position: absolute;
+    top: 475px;
+    right: 320px ;
+}
+
+.escritores_agregar_pelicula {
+    font-size: 18px;
+    margin: 5px;
+    position: absolute;
+    top: 475px;
+    left: 360px ;
+}
+
+.protagonistas_agregar_pelicula {
+    font-size: 18px;
+    margin: 5px;
+    position: absolute;
+    top: 390px;
+    left: 600px;
+}
+
+.sinopsis_agregar_pelicula {
+    font-size: 18px;
+    margin: 5px;
+    position: absolute;
+    top: 475px;
+    left: 600px;
+}
+
+.peliculas_agregar {
+    background-color: white;
+    position: relative;
+}
+
+.agregar_agregar_pelicula {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    left: 400px;
+    top: 200px;
+}
+
+.tableta_agregar_pelicula {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 400px;
+    top: 200px;
+}
+
+.peliculas_agregar {
+    position: relative;
+}
+
+.footer_agregar_peliculas {
+    position: absolute;
+    top: 800px;
+}

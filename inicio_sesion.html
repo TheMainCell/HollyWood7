@@ -1,27 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>Inicio Sesion</title>
+    <link rel="stylesheet" href="./css/estilos.css">
 </head>
-<body>
-    <main>
+<body class="login">
+    <div id="contenedor"></div>
+    <main class="main_login">
+        
+        <!-- header donde almacenare el logo y la imagen de donde se hara el login -->
+        <header>
+            <img class="logo" src="./imagenes/logo/logo.png" alt="">
+            <img class="fondo" src="./imagenes/tique/original1.2.png" alt="">
+        </header>
+        
+        <!-- aquie esta el logo donde estara representado nuestro grupo llamado the main cell -->
+        <figure>
+            <img class="cell" src="/imagenes/the main cell/the main cell.png" alt="">
+        </figure>
+
+        <!-- formulario donde se estara la informacion a llenar por los usuarios -->
         <form>
 
-            <input type="text" required placeholder="Usuario">
+            <input class="usuario" type="text" required placeholder="Usuario">
             <br>
 
-            <input type="password" required placeholder="Contraseña">
+            <input class="contraseña" type="password" required placeholder="Contraseña">
             <br>
 
-            <input type="submit" value="Iniciar sesion">
+            <input class="sesion" type="submit" value="Iniciar sesion">
             <br>
+           
+            <!-- opciones para restablecer cuenta y registrarse -->
+            <div class="olvidado">
+            <a class="registro" href="registro.html">Registrarse |</a> 
+            <a class="olvide" href="recuperar.html">Olvide mi contraseña</a>
+            </div>
 
-            <a href="registro.html">Registrarse</a> |
-            <a href="recuperar.html">Olvide mi contraseña</a>
         </form>
-        
+
     </main>
-    
+
+    <!-- redes sociales -->
+    <aside>
+        <a class="facebook_mover" href="https://www.facebook.com/"><img class="facebook" src="/imagenes/iconos_redes/facebook.png" alt=""></a>
+
+        <a class="instagram_mover" href="https://www.instagram.com/"> <img class="instagram" src="/imagenes/iconos_redes/instagram.png" alt=""></a>
+
+        <a class="twitter_mover" href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Des"><img class="twitter" src="/imagenes/iconos_redes/twitter.png" alt=""></a>
+        
+    </aside>
 </body>
 </html>

@@ -3,27 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Registro</title>
+    <link rel="stylesheet" href="./css/estilos.css">
 </head>
-<body>
-    <main>
+<body class="login"> 
+
+    <div class="contenedor">
+
+    <main class="main_login">
+        <!-- header donde almacenare el logo y la imagen de donde se hara el login -->
+        <header>
+            <figure>
+                <img class="logo" src="/imagenes/logo/logo.png" alt="">
+                <img class="fondo" src="./imagenes/tique/original1.2.png" alt="">
+            </figure>
+        </header>
+
+        <!-- aquie esta el logo donde estara representado nuestro grupo llamado the main cell -->
+        <figure>
+            <img class="cell" src="/imagenes/the main cell/the main cell.png" alt="">
+        </figure>
+
+        <!-- formulario donde se estara la informacion a llenar por los usuarios -->
         <form>
 
-        <input type="text" required placeholder="Nombre">
+        <input class="nombre" type="text" required placeholder="Nombre">
         <br>
 
-        <input type="text" required placeholder="Usuario">
+        <input class="usuario_registro" type="text" required placeholder="Usuario">
         <br>
 
-        <input type="password" required placeholder="Contraseña">
+        <input class="contraseña_registro" type="password" required placeholder="Contraseña">
         <br>
 
-        <input type="password" required placeholder="Confirmar clave">
+        <input class="clave" type="password" required placeholder="Confirmar clave">
         <br>
 
-        <input type="submit" value="Registrarme">
+        <input class="registro_registro" type="submit" value="Registrarme">
 
         </form>
         
+    
     </main>
+    
+    <!-- redes sociales -->
+    <aside>
+        <a class="facebook_mover" href="https://www.facebook.com/"><img class="facebook" src="/imagenes/iconos_redes/facebook.png" alt=""></a>
+
+        <a class="instagram_mover" href="https://www.instagram.com/"> <img class="instagram" src="/imagenes/iconos_redes/instagram.png" alt=""></a>
+
+        <a class="twitter_mover" href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Des"><img class="twitter" src="/imagenes/iconos_redes/twitter.png" alt=""></a>
+    </aside>
+    
+    </div>
 </body>
 </html>
