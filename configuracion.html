@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notificaciones</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" href="imagenes/favicon.jpg">
+    </head>
+<!-- Una clase a cada uno de los body para poder darles el mismo estilo -->
+    <body class="cuerpo-oscuro"> 
+        <!-- Clase para el contenedor principal -->
+        <div class="container">
+            <!-- Clase para separar -->
+                <div class="sidebar-right">
+                    <div class="header-para-navegar">
+                        <i class='bx bx-left-arrow-alt'></i>
+                        <h1>Configuración</h1>
+                    </div> 
+                    
+
+                        <!-- Lo que hare aqui sera agregar los datos para previsualizar el perfil -->
+                        <div class="perfil">
+                            <img src="imagenes/images.jpg" alt="">
+                            <!-- Con este <a> puedes darle las dimenciones que quieras, no hace falta ponerle clase porque puedes acceder a ella a traves de su padre -->
+                            <a href="secciones/micuenta.html" target="pantalla" class="current1"><span name="nombre">Jose Josefinito</span><span name="usuario">Usuario005</span></a>
+                        </div>
+                        
+                        <!-- La barra de busqueda -->
+                        <div class="buscar">
+                            <input type="search" placeholder="Buscar">
+                        </div>
+                        <!-- Esta es una linea que separa el header del  -->
+                        <div class="separador"><hr></div>
+                    <nav>
+                        <a href="secciones/idioma.html" target="pantalla" class="current2"> <i class='bx bx-message-rounded'></i> Idioma</a>
+                        <a href="secciones/temas.html" target="pantalla" class="current3"> <i class='bx bxs-palette'></i> Temas</a>
+                        <a href="secciones/ter_y_cond.html" target="pantalla"> <i class='bx bx-info-circle'></i> Terminos y Condiciones</a>
+                        <a href="secciones/contacto.html" target="pantalla"><i class='bx bxs-contact' style='color:#fbfafa'  ></i>Contacto</a>
+                        <a href="secciones/ayuda.html" target="pantalla" class="current4"> <i class='bx bx-help-circle'></i> Ayuda</a> 
+                        <a href="secciones/salircuenta.html" target="pantalla" class="current5"> <i class='bx bx-log-out'></i> Salir de la cuenta</a>
+                    </nav>
+                </div>
+                
+
+                <!-- Este es el div de la parte izquierda en el cual estare viendo cada una de las opciones -->
+                <div class="sidebar-left">
+
+                    <iframe src="secciones/micuenta.html" name="pantalla" frameborder="0"></iframe>
+                </div> 
+        </div>
+    </body>
+</html>
