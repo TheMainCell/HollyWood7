@@ -83,7 +83,11 @@ button {
 /* PÁGINAS IDIVIDUALES */
 
 .contenedor-header {
+    align-items: center;
     background: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
 }
 
 .logo-individual {
@@ -93,7 +97,6 @@ button {
 .contenedor-info, .imagenArriba {
     margin-left: 100px;
     display: flex;
-    border: 1px solid;
     flex-wrap: nowrap;
     /* width:  100%; */
     height: auto;
@@ -101,15 +104,12 @@ button {
 
 .contenedor-a {
     display: flex;
-    /* flex-direction: row; */
-    display: flex;
     width: 100%;
 }
-/* .contenedor-a section { */
-    /* border: 1px solid; */
-    /* display: flex; */
-    /* flex-direction: column; */
-/* } */
+.contenedor-a { 
+    display: flex; 
+    width: 100%; 
+}
 
 button {
     display: none;
@@ -124,18 +124,25 @@ button {
 }
 
 .imagen {
-    width: 400px;
-}
-
-.contenedor-nav {
-    display: none;
-}
-
-.contenedor-header {
-    display: flex;
     align-items: center;
+    width: 400px;
+    display: flex;
     justify-content: flex-end;
-    max-width: 100%;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    align-items: start;
+    margin-left: 20px;
+}
+
+.navMenu a {
+    list-style: none;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .contenedor-trailerTicket {
@@ -158,10 +165,11 @@ button {
 } 
 
 .ver {
-    display: block;
+    display: flex;
     position: relative;
     left: 17px;
     top: 0;
+    height: 46px;
 } 
 
 .botones {
@@ -173,10 +181,10 @@ button {
 } 
 
 .boton {
-    position: relative;
+    /* position: relative; */
     display: flex;
-    align-content: center;
-    justify-content: center;
+    /* align-content: center; */
+    /* justify-content: center; */
 }
 
 .texto, .sub-temas,.titulo-pelicula {
