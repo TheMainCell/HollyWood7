@@ -1,22 +1,40 @@
+/* CONFIGURACIÓN */
+
 /* Estilos para todos */
-*{
+* {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
 }
+
 /* Colores */
 :root {
     --fondo: #1A1E27;
     --hover: #2b2b2c;
 }
 
-/* Este es el estilo que tendran las todas las paginas */
+
+/* Este es el estilo que tendran las todas las paginaes */
 .cuerpo-oscuro {
     background-color: #000;
     color: #fff;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
 /* /////////////////////////////configuracion///////////////////////////////////////// */
+/* Colores */
+:root {
+    --fondo: #1A1E27;
+    --hover: #2b2b2c;
+}
+
+/* Este es el estilo que tendran las todas las paginaes */
+.cuerpo-oscuro {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 /* Contenedor donde se ubucan los dos div almacenados */
 .container {
@@ -38,17 +56,17 @@
     height: 650px;
 }
 
-.sidebar-right > nav {
+.sidebar-right>nav {
 
     height: 300px;
     display: flex;
     flex-wrap: wrap;
     place-items: center;
-    
+
 }
 
 
-.sidebar-right nav > a { 
+.sidebar-right nav>a {
     height: 40px;
     border-radius: 5px;
     display: flex;
@@ -72,14 +90,10 @@
 }
 
 /* Links con iconos */
-.sidebar-right nav a > i { 
+.sidebar-right nav a, i {
     padding: 3px;
 
 }
-
-
-
-
 
 /* Cabecera */
 
@@ -88,16 +102,20 @@
     padding: 10px;
     place-items: center;
 }
-.header-para-navegar > h1 {
+
+.header-para-navegar>h1 {
     font-size: 15pt;
     text-align: center;
 }
 
-.header-para-navegar > .bx {
-    align-items: center;
-    font-size: 30px;
+.header-para-navegar .bx {
     width: 60px;
     height: 40px;
+    font-size: 30px;
+}
+
+.header-para-navegar > a {
+    color: #FFF;
 }
 
 /* Mi perfil para previzualizar */
@@ -114,14 +132,15 @@
     transition: all .2s;
 
 }
+
 /* Hover de perfil */
 .perfil:hover {
     background-color: var(--hover);
     border-radius: 13px;
 }
 
-.perfil > img {
-    
+.perfil>img {
+    object-fit:cover;
     border-radius: 50%;
     height: 80px;
     width: 80px;
@@ -131,7 +150,7 @@
 
 }
 
-.perfil > a {
+.perfil>a {
     position: relative;
     bottom: 0%;
     right: 20%;
@@ -144,29 +163,16 @@
 
 /*  */
 
-.perfil a > span {
+.perfil a>span {
     /* border: 1px solid; */
 
-    
+
     color: #ffffff;
     display: flex;
     justify-content: start;
     align-items: center;
-    
-    
-}
-/* Barra de busqueda */
-.buscar {
-    margin: 0 auto;
-}
 
-.buscar input {
-    color: white;
-    background-color: #1A1E27;
-    border: 0;
-    padding: 8px;
-    width: 260px;
-    border-radius: 10px;
+
 }
 
 /* Barra para separar */
@@ -202,129 +208,331 @@ iframe {
 }
 
 /* /////////////////////////////micuenta//////////////////////////////////// */
-
-
-/* /////////////////////////////idioma//////////////////////////////////// */
-.header-del-idioma {
-    /* border: 1px solid; */
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    margin-bottom: 20px;
-}
-.header-del-idioma figure > img {
-    height: 100px;
-}
-.header-del-idioma > p {
-    text-align: center;
-    width: 600px;
-}
-
-
-/* Barra de busqueda */
-#barra-busqueda-idioma {
+/* Header */
+.header-de-cuenta {
     /* border: 1px solid; */
     display: flex;
     justify-content: center;
 }
-#barra-busqueda-idioma input {
-    border-bottom: 1px solid white;
-    border-right: 0;
-    border-top: 0;
-    border-left: 0;
-    background-color: #000;
-    padding: 8px;
-    width: 244px;
-    height: 30px;
-    margin: 10px 0;
-    color: white;
+
+.header-de-cuenta img {
+    /* border: 1px solid red; */
+    max-width: 500px;
+    width: 15%;
+    
 }
 
-#barra-busqueda-idioma input:focus {
-    border: 1px solid red;
-    }
-
-#barra-busqueda-idioma input:active {
-        border: 0;
-    }
-
-
-
-/* Lupa */
-#barra-busqueda-idioma .bx {
-    /* border: 1px solid;  */
+.header-de-cuenta .bx {
+    /* border: 1px solid red; */
     display: flex;
-    align-items: center;  
-   
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    height: 120px;
+    width: 80px;
+ 
 }
-.bx-search {
-     height: 30;
-    width: 30;
+/* Main contenedor */
+.contenedor-DP {
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-DP h1 {
+    text-align: center;
+}
+.contenedor-datos-personales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nombre-de-usuario, .correo-electronico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 162px;
+    width: 333px;
+    background-color: var(--fondo);
+    border-radius: 10px;
 }
 
-/* Los bloques de idioma */
-.bloques-de-idioma {
-    /* border: 1px solid; */
+.nombre-de-usuario a, .correo-electronico a {
+    color: #FFF;
+    text-decoration: none;
+    padding: 8px 20px;
+}
+
+.boton_de_DT {
+    background-color: #505257;
+    border-radius: 5px;
+    transition: all .2s;
+    
+}
+.boton_de_DT:hover {
+    background-color: var(--hover);
+}
+/* Separador */
+.separador-de-usuario {
+    width: 400px;
+    align-self: center;
+    text-align: center;
+    margin: 20px;
+}
+.separador-de-usuario h3 {
+    padding: 10px;
+    font-size: 18pt;
+}
+
+/* Cuenta de usuario */
+.contenedor-de-usuario {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
+} 
+.contenedor-de-usuario h2 {
+    text-align: center;
+    font-size: 15pt;
+}
+
+
+
+.cuenta-de-usuario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fondo);
+    height: 122px;
+    width: 595px;
+    border-radius: 5px;
+    align-self: center;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+.editar-contrasena a, .editar-usuario a {
+    color: #FFF;
+    display: flex;
+    text-decoration: none;
+    font-size: 15pt;
+
+
+}
+#boton-delete {
+    margin: 10px auto;
+    display: block;
+    background-color: var(--fondo);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(255, 0, 0);
+    font-size: 18pt;
+    cursor: pointer;
     transition: all .2s;
 }
-.bloques-de-idioma:hover {
+#boton-delete:hover {
     background-color: var(--hover);
-    border-radius: 5px;
 }
-/* Las banderas */
-.bloques-de-idioma img {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    object-fit:cover;
-}
-.idioma-e-informacon {
-    /* border: 1px solid; */
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-}
-.idioma-e-informacon a {
-    color: white;
+
+
+
+.a-eliminar {
     text-decoration: none;
 }
-
-
-/* /////////////////////////////tema//////////////////////////////////// */
-.caja-para-tema {
+/* Este es el modal de eliminar cuenta */
+.eliminar-cuenta {
+    width: 380px;
+    height: 150px;
     border-radius: 5px;
-    height: 300px;
-    padding: 40px 70px;
-    /* width: 300px; */
-    display: block;
-    margin: 0 auto;
-
-    background: var(--hover);
+    background-color: var(--fondo);
+    text-align: center;
+    padding: 20px;
+}
+.eliminar-cuenta h3 {
+    margin-bottom: 10px;
+}
+.eliminar-cuenta a {
+    text-decoration: none;
+    background-color: #131414;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin: 10px;
 }
 
-.contenedor-de-temeas {
-    /* border: 1px solid; */
+.eliminar-cuenta a:hover {
+    background-color: var(--hover);
+}
+/* //////////////// Pagina para editar los datos del usuario dentro de micuenta ///////////  */
+
+.main-de-credenciales {
     display: flex;
+    /* border: 1px solid white; */
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+}
+.header-de-credenciales {
+    /* border: 1px solid white; */
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+.header-de-credenciales img {
+    height: 120px;
+}
+.header-de-credenciales i {
+    /* border: 1px solid; */
+    font-size: 35px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.titulo h1 {
+    margin: 0;
+    font-size: 25pt;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.titulo {
+    /* border: 1px solid white; */
+    display: flex;
+}
+/* Contenido de Credenciales*/
+/* boton salir  */
+.boton-salir {
+    width: 850px;
+    float: left;
+}
+.boton-salir i{
+    color: white;
+    font-size: 40px;
+}
+
+.contenedor-foto-nombre, .usuario-contrasena{
+    display: flex;   
+    align-self: center;
+    /* width: 90%; */
+    flex-direction: column;
+    background-color: #1A1E27;
+    margin: 0 0 20px 0;
+    border-radius: 10px;
+}
+.contenedor-foto-nombre figure {
+
+    display: flex;
+    margin: 20px;
+}
+.contenedor-foto-nombre figure img {
+    object-fit:cover;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+.contenedor-foto-nombre figcaption {
+    /* border: 1px solid black; */
+    align-self: center;
+    margin: 0 10px;
+}
+.contenedor-foto-nombre figcaption a {
+    text-decoration: none;
+    color: #1DE6F3;
+}
+
+/* El formulario  */
+.contenedor-foto-nombre form {
+    margin: 0 20px 20px 25px;
+
+}
+.contenedor-foto-nombre form input, .usuario-contrasena form input, .contenedor-usuario-DP form input {
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #505257;
+    width: 300px;
+}
+
+/* Aqui todo lo que tenga color blanco*/
+
+/* Contenedor del correo electronico */
+.contenedor-usuario-DP {
+    /* border: 1px solid white; */
+    background-color: #1A1E27;
+    height: 100px;
+    width: 550px;
+    margin: 7px;
+    border-radius: 5px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
+}
+
+.contenedor-usuario-DP form {
+    /* border: 1px solid white; */
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
 }
 
 
-.contenedor-de-temeas img {
-    display: block;
-    height: 80px;
-    border: 1px solid;
-    margin: 0 auto;
-    
-    
+.contenedor-usuario-DP form input {
+    width: 180px;
 }
 
+/* Separador */
+.separador-DP {
+    color: #FFF;
+    margin: 10px;
+    width: 400px;
+    text-align: center;
+}
 
+/* usuario-contrasena */
 
+.usuario-contrasena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+    color: white;
+    height: 150px;
+    width: 750px;
+}
+.usuario-contrasena form {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+}
+.usuario-contrasena form label, .contenedor-usuario-DP label, .contenedor-foto-nombre form label {
+    align-self: center;
+    color: white;
+    margin: 10px;
+}
+
+.usuario-contrasena form input {
+    width: 190px;
+}
+
+.guardar-cambios {
+    /* border: 1px solid white; */
+    
+}
+.guardar-cambios button {
+    background-color: black;
+    color: #1DE6F3;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 0;
+    transition: all .2s;
+}
+.guardar-cambios button:hover {
+    background-color: var(--hover);
+
+}
 /* /////////////////////////////ter_y_cond//////////////////////////////////// */
 
 /* Esta es la parte de los articles */
@@ -333,18 +541,23 @@ iframe {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+
 }
+
 .termYCond {
     text-align: center;
 }
+
 article {
     display: flex;
 }
-article section ,h1 {
+
+article section,
+h1 {
     text-align: justify;
     margin: 20px;
 }
+
 /* ///////////////////////////////////contacto/////////////////////////////////////// */
 /* Contenedor principal */
 .contenedor-de-contacto {
@@ -363,7 +576,6 @@ article section ,h1 {
     height: 80px;
     display: block;
     margin: 0 auto;
-    border: 1px solid;
 }
 
 .header-del-contacto h1 {
@@ -371,8 +583,7 @@ article section ,h1 {
 }
 
 /* Cajas */
-.chetear, .llamar {
-    border: 1px solid;
+.llamar {
     border-radius: 5px;
     background-color: var(--fondo);
     width: 400px;
@@ -383,12 +594,14 @@ article section ,h1 {
     transition: all .2s;
     cursor: pointer;
 }
-.chetear:hover, .llamar:hover {
+
+.llamar:hover {
     background-color: var(--hover);
 }
-.contenedor-de-contacto h2, p {
+
+.contenedor-de-contacto h2,
+p {
     margin: 7px;
-    padding: 10px;
 }
 
 .ubicacion {
@@ -407,9 +620,10 @@ article section ,h1 {
     /* border: 1px solid; */
     margin-bottom: 50px;
 }
- .header-de-ayuda img {
+
+.header-de-ayuda img {
     height: 180px;
- }
+}
 
 .header-de-ayuda h1 {
     font-size: 28pt;
@@ -417,9 +631,51 @@ article section ,h1 {
 
 .main-de-ayuda p {
     /* border: 1px solid; */
-    text-align:  justify;
+    text-align: justify;
     width: 669px;
- }
+}
+
 /* /////////////////////////////salircuenta//////////////////////////////////// */
+.salir {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    color: #FFF;
+}
+
+.salir h2 {
+    padding: 50px;
+    text-align: center;
+}
+.boton {
+    display: flex;
+    justify-content: center;
+}
+.boton_1 {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #505257;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all .2s;
+}
+
+.boton_1:hover {
+
+    background-color: rgb(28, 116, 216);
+}
+
+/* /////////////////////////////Notificaciones//////////////////////////////////// */
+/* ///////////////////////////// Version //////////////////////////////////// */
+
+
+
+
 
 /* ///////////////////////////////Responsive//////////////////////////////////// */
