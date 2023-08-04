@@ -210,7 +210,6 @@ iframe {
 /* /////////////////////////////micuenta//////////////////////////////////// */
 /* Header */
 .header-de-cuenta {
-    /* border: 1px solid; */
     display: flex;
     justify-content: center;
 }
@@ -234,8 +233,11 @@ iframe {
 }
 /* Main contenedor */
 .contenedor-DP {
+    position: relative;
+    opacity: 1;
     display: flex;
     flex-direction: column;
+    transition: .3s
 }
 .contenedor-DP h1 {
     text-align: center;
@@ -251,18 +253,17 @@ iframe {
     justify-content: center;
     align-items: center;
     margin: 5px;
-    height: 162px;
+    height: 100px;
     width: 333px;
     background-color: var(--fondo);
     border-radius: 10px;
 }
 
-.nombre-de-usuario a, .correo-electronico a {
+.nombre-de-usuario a, .correo-electronico a, .separador-de-usuario a {
     color: #FFF;
     text-decoration: none;
     padding: 8px 20px;
 }
-
 .boton_de_DT {
     background-color: #505257;
     border-radius: 5px;
@@ -272,6 +273,7 @@ iframe {
 .boton_de_DT:hover {
     background-color: var(--hover);
 }
+
 /* Separador */
 .separador-de-usuario {
     width: 400px;
@@ -279,10 +281,7 @@ iframe {
     text-align: center;
     margin: 20px;
 }
-.separador-de-usuario h3 {
-    padding: 10px;
-    font-size: 18pt;
-}
+
 
 /* Cuenta de usuario */
 .contenedor-de-usuario {
@@ -290,7 +289,8 @@ iframe {
     flex-direction: column;
 } 
 .contenedor-de-usuario h2 {
-    text-align: center;
+    text-align: start;
+    margin-left: 140px;
     font-size: 15pt;
 }
 
@@ -338,7 +338,13 @@ iframe {
     text-decoration: none;
 }
 /* Este es el modal de eliminar cuenta */
+/* Contenedor del modal de HTML */
+
 .eliminar-cuenta {
+    display: none;
+    position: absolute;
+    left: 30%;
+    top: 45%;
     width: 380px;
     height: 150px;
     border-radius: 5px;
@@ -359,7 +365,8 @@ iframe {
 }
 
 .eliminar-cuenta a:hover {
-    background-color: var(--hover);
+    background-color: rgb(0, 119, 255);
+    
 }
 /* //////////////// Pagina para editar los datos del usuario dentro de micuenta ///////////  */
 
@@ -375,9 +382,10 @@ iframe {
     height: 120px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid white;
+    /* border-bottom: 1px solid white; */
 }
 .header-de-credenciales img {
+    display: none;
     height: 120px;
 }
 .header-de-credenciales i {
@@ -402,7 +410,7 @@ iframe {
 /* Contenido de Credenciales*/
 /* boton salir  */
 .boton-salir {
-    width: 850px;
+    /* width: 850px; */
     float: left;
 }
 .boton-salir i{
@@ -410,6 +418,9 @@ iframe {
     font-size: 40px;
 }
 
+.lapiz .bx{
+    color: rgba(28, 116, 216,0);
+}
 .contenedor-foto-nombre, .usuario-contrasena{
     display: flex;   
     align-self: center;
@@ -461,7 +472,7 @@ iframe {
     /* border: 1px solid white; */
     background-color: #1A1E27;
     height: 100px;
-    width: 550px;
+    width: 440px;
     margin: 7px;
     border-radius: 5px;
     display: flex;
@@ -499,7 +510,7 @@ iframe {
     /* border: 1px solid white; */
     color: white;
     height: 150px;
-    width: 750px;
+    width: 580px;
 }
 .usuario-contrasena form {
     /* border: 1px solid white; */

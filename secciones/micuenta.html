@@ -15,28 +15,22 @@
     <header class="header-de-cuenta">
         <img src="../imagenes/hw7/logo.png" alt="logo"> 
     </header> 
-    
     <main class="contenedor-DP">
-
         <h1>Datos Personales</h1>
-
         <div class="contenedor-datos-personales">
             <div class="nombre-de-usuario">
-                <a href="../secciones/editarCredenciales.html">Jose Josefinito</a> 
-                <a href="../secciones/editarCredenciales.html" class="boton_de_DT">Editar nombre</a>
+                <a href="../secciones/editarCredenciales.html"  >Jose Josefinito</a> 
             </div>
             <div class="correo-electronico">
                 <a href="../secciones/editarCredenciales.html">usuario@gmail.com</a>
-                <a href="../secciones/editarCredenciales.html" class="boton_de_DT" >Editar correo electrónico</a>
             </div>
         </div>
 
 
         <!-- Separador -->
         <div class="separador-de-usuario">
-            <h3>Cuenta de usuario</h3>
-                <hr>
-            </div>
+            <a href="../secciones/editarCredenciales.html" class="boton_de_DT">Editar perfil</a>
+        </div>
 
         <!-- Cuenta de usuario -->
         <div class="contenedor-de-usuario">
@@ -54,15 +48,37 @@
             <button id="boton-delete" class="a-eliminar">Eliminar cuenta</button>
         </div>
 
-<!-- Esto es un modal -->
-        <div class="eliminar-cuenta">
-            <h3>Estás seguro de que deseas eliminar esta cuenta?</h3>
-            <a href="">Si</a>
-            <a href="">No</a>
-        </div>
-
-
-        <!-- Pantalla dentro de otra pantalla, aun no sabemos que vamos a hacer, por lo tanto esas pantallas no las hare, poro hago este comentario por si les surge esta duda. READ ME PLZ -->
     </main>
+<!-- Esto es un modal -->
+<div class="modal">
+    <div class="eliminar-cuenta">
+        <h3>Estás seguro de que deseas eliminar esta cuenta?</h3>
+        <a href="../index.html" target="_parent">Si</a>
+        <a href="" class="cerrar">No</a>
+    </div>
+
+</div>
+    <!--Modal de eliminar cuenta en "MICUENTA" -->
+    <script>
+        // Llamamos las variables
+        let abrir = document.getElementsByClassName('a-eliminar')[0];
+        let cerrar = document.getElementsByClassName('cerrar')[0];
+        let aparece = document.getElementsByClassName('contenedor-DP')[0];
+        // para que aparezca
+        let modal = document.getElementsByClassName('eliminar-cuenta')[0];
+        
+        //Vamos al mambo
+        abrir.addEventListener('click', e => {
+           aparece.style.opacity = "0.37";
+           modal.style.display = "block";
+        });
+        cerrar.addEventListener('click', e => {
+            aparece.style.opacity = "1";
+            modal.style.display = "none";
+
+        });
+
+
+    </script>
 </body>
 </html>
