@@ -5,24 +5,33 @@
     <title>Página Principal | HollyWood7</title>
     <link rel="icon" href="favicon-32x32.png">
     <link rel="stylesheet" href="css/estilos.css">
-    
+     
 </head>
 <body>
     <!-- Contenedor de toda la página -->
     <div id="contenedor">
         <!-- Logo -->
         <header class="header-principal">
-                <img src="logo.png" alt="Logo" class="imagen-logo">
+                <div class="contenedor-menu">
+                    <!-- Menú -->
+                    <div class="navMenu">
+                        <a href="#pagina_principal.html"><img src="navegacion/home.svg" alt="" class="casita-principal"></a>
+                        <a href="configuracion.html"><img src="navegacion/settings.svg" alt="" class="configuracion-principal"></a>
+                        <a href="notificacion.html"><img src="navegacion/notifications.svg" alt="" class="configuracion-principal"></a>
+                    </div>
+                    <div class="imagen-logo">
+                        <img src="logo.png" alt="Logo" class="imagen-logo">
+                    </div>
+                </div>
             <div class="botones">
-                <a href="#"><button class="boton">Ver Información</button></a>
-                <a href="#"><button class="boton">Ver Trailer</button></a>
+                <a href="peliculas/heroes/theBatman.html"><button class="boton">Ver Información</button></a>
             </div>
         </header>
         <main>
-            <h2>Estrenos</h2>
+            <h2 class="subtitulo">Estrenos</h2>
             <div class="estrenos">
                 <div class="pelicula uno">
-                    <a href="#"><img src="imagenes/caratulas/accion/jonh-wick-3.jpg" alt="John Wick" class="caratula"></a>
+                    <a href="peliculas/accion/johnWick3.html"><img src="imagenes/caratulas/accion/jonh-wick-3.jpg" alt="John Wick" class="caratula"></a>
                     <p class="p-texto">John Wick 3: Parabellum</p>
                 </div>
                 <div class="pelicula dos">
@@ -30,7 +39,7 @@
                     <p class="p-texto">Dragon Ball Z Golpe del Dragón</p>
                 </div>
                 <div class="pelicula tres">
-                    <a href=""><img src="imagenes/caratulas/heroes/infinity-war.jpg" alt="Vengadores" class="caratula">
+                    <a href="peliculas/heroes/infinityWar.html"><img src="imagenes/caratulas/heroes/infinity-war.jpg" alt="Vengadores" class="caratula">
                     <p class="p-texto">Los Vengadores: Infinty War</p>
                 </div>
                 <div class="pelicula cuatro">
@@ -38,112 +47,112 @@
                     <p class="p-texto">Jumanji</p>
                 </div>
             </div>
-            <h2>Acción</h2>
+            <h2 class="subtitulo">Acción</h2>
             <div class="accion">
                 <div class="pelicula uno">
-                    <a href=""><img src="imagenes/caratulas/accion/jonh-wick-3.jpg" alt="John Wick" class="caratula">
-                    <p>John Wick 3: Parabellum</p>
+                    <a href="peliculas/accion/johnWick3.html"><img src="imagenes/caratulas/accion/jonh-wick-3.jpg" alt="John Wick" class="caratula">
+                    <p class="p-texto">John Wick 3: Parabellum</p>
                 </div>
                 <div class="pelicula dos">
-                    <a href=""><img src="imagenes/caratulas/accion/Agente-Fortune-el-gran-engaño.jpg" alt="Agente Fortune" class="caratula">
-                    <p>Agente Fortune</p>
+                    <a href="peliculas/accion/agenteFortuna.html"><img src="imagenes/caratulas/accion/Agente-Fortune-el-gran-engaño.jpg" alt="Agente Fortune" class="caratula">
+                    <p class="p-texto">Agente Fortune</p>
                 </div>
                 <div class="pelicula tres">
-                    <a href=""><img src="imagenes/caratulas/accion/Bad-Boys-para-siempre.jpg" alt="Bad Boys" class="caratula">
-                    <p>Bad Boys</p>
+                    <a href="peliculas/accion/badBoys.html"><img src="imagenes/caratulas/accion/Bad-Boys-para-siempre.jpg" alt="Bad Boys" class="caratula">
+                    <p class="p-texto">Bad Boys</p>
                 </div>
                 <div class="pelicula cuatro">
-                    <a href=""><img src="imagenes/caratulas/accion/Mortal-Kombat.jpg" alt="MK" class="caratula">
-                    <p>Mortal Kombat</p>
+                    <a href="peliculas/accion/mortalKombat.html"><img src="imagenes/caratulas/accion/Mortal-Kombat.jpg" alt="MK" class="caratula">
+                    <p class="p-texto">Mortal Kombat</p>
                 </div>
                 <div class="pelicula cinco">
-                    <a href=""><img src="imagenes/caratulas/accion/Nadie.jpg" alt="Nobody" class="caratula">
-                    <p>Nadie</p>
+                    <a href="peliculas/accion/nadie.html"><img src="imagenes/caratulas/accion/Nadie.jpg" alt="Nobody" class="caratula">
+                    <p class="p-texto">Nadie</p>
                 </div>
                 <div class="pelicula cinco">
-                    <a href=""><img src="imagenes/caratulas/accion/Rapidos-y-Furiosos-9.jpg" alt="FF" class="caratula">
-                    <p>Rapido Rapidos y Furiosos 9</p>
+                    <a href="peliculas/accion/ff.html"><img src="imagenes/caratulas/accion/Rapidos-y-Furiosos-9.jpg" alt="FF" class="caratula"></a>
+                    <p class="p-texto">Rapido Rapidos y Furiosos 9</p>
                 </div>
             </div>
-            <h2>Comedia</h2>
+            <h2 class="subtitulo">Comedia</h2>
             <div class="comedia">
                 <div class="pelicula uno">
-                    <a href="peliculas/comedia/jumanji.html"><img src="imagenes/caratulas/comedia/Jumanji-En-la-selva-(2017).jpeg" alt="Jumanji" class="caratula">
-                    <p>Jumanji</p>
+                    <a href="peliculas/comedia/jumanji.html"><img src="imagenes/caratulas/comedia/Jumanji-En-la-selva-(2017).jpeg" alt="Jumanji" class="caratula"></a>
+                    <p class="p-texto">Jumanji</p>
                 </div>
                 <div class="pelicula dos">
-                    <a href="peliculas/comedia/lotoman.html"><img src="imagenes/caratulas/comedia/lotoman(2016).jpg" alt="Lotoman" class="caratula">
-                    <p>Lotoman</p>
+                    <a href="peliculas/comedia/lotoman.html"><img src="imagenes/caratulas/comedia/lotoman(2016).jpg" alt="Lotoman" class="caratula"></a>
+                    <p class="p-texto">Lotoman</p>
                 </div>
                 <div class="pelicula tres">
-                    <a href="peliculas/comedia/paquemecase.html"><img src="imagenes/caratulas/comedia/Pa-que-me-case-(2016).jpeg" alt="Pa que me case" class="caratula">
-                    <p>Pa' Que me Case</p>
+                    <a href="peliculas/comedia/paquemecase.html"><img src="imagenes/caratulas/comedia/Pa-que-me-case-(2016).jpeg" alt="Pa que me case" class="caratula"></a>
+                    <p class="p-texto">Pa' Que me Case</p>
                 </div>
                 <div class="pelicula cuatro">
-                    <a href="peliculas/comedia/ridealong.html"><img src="imagenes/caratulas/comedia/Ride-Along-(2016).jpg" alt="Ride Along" class="caratula">
-                    <p>Ride Along</p>
+                    <a href="peliculas/comedia/ridealong.html"><img src="imagenes/caratulas/comedia/Ride-Along-(2016).jpg" alt="Ride Along" class="caratula"></a>
+                    <p class="p-texto">Ride Along</p>
                 </div>
                 <div class="pelicula cinco">
-                    <a href="peliculas/comedia/tuberculo.html"><img src="imagenes/caratulas/comedia/Tuberculo-Gourmet-(2015).jpeg" alt="Tuberculo" class="caratula">
-                    <p>Tuberculo Gourmet</p>
+                    <a href="peliculas/comedia/tuberculo.html"><img src="imagenes/caratulas/comedia/Tuberculo-Gourmet-(2015).jpeg" alt="Tuberculo" class="caratula"></a>
+                    <p class="p-texto">Tuberculo Gourmet</p>
                 </div>
                 <div class="pelicula cinco">
-                    <a href="peliculas/comedia/espiaymedio.html"><img src="imagenes/caratulas/comedia/Un-espia-y-medio-(2016).jpeg" alt="Espia y medio" class="caratula">
-                    <p>Un Espia y Medio</p>
+                    <a href="peliculas/comedia/espiaymedio.html"><img src="imagenes/caratulas/comedia/Un-espia-y-medio-(2016).jpeg" alt="Espia y medio" class="caratula"></a>
+                    <p class="p-texto">Un Espia y Medio</p>
                 </div> 
             </div>
-            <h2>Héroe</h2>
+            <h2 class="subtitulo">Héroe</h2>
             <div class="heroe">
                 <div class="pelicula uno">
-                    <a href=""><img src="imagenes/caratulas/heroes/black-Adam.jpg" alt="Black Adam" class="caratula">
-                    <p>Black Adam</p>
+                    <a href="peliculas/heroes/blackAdam.html"><img src="imagenes/caratulas/heroes/black-Adam.jpg" alt="Black Adam" class="caratula"></a>
+                    <p class="p-texto">Black Adam</p>
                 </div>
                 <div class="pelicula dos">
-                    <a href=""><img src="imagenes/caratulas/heroes/constatine.jpg" alt="Constantine" class="caratula">
-                    <p>Constantine</p>
+                    <a href="peliculas/heroes/constantine.html"><img src="imagenes/caratulas/heroes/constatine.jpg" alt="Constantine" class="caratula"></a>
+                    <p class="p-texto">Constantine</p>
                 </div>
                 <div class="pelicula tres">
-                    <a href=""><img src="imagenes/caratulas/heroes/infinity-war.jpg" alt="Vengadores" class="caratula">
-                    <p>Infinite War</p>
+                    <a href="peliculas/heroes/infinityWar.html"><img src="imagenes/caratulas/heroes/infinity-war.jpg" alt="Vengadores" class="caratula"></a>
+                    <p class="p-texto">Infinite War</p>
                 </div>
                 <div class="pelicula cuatro">
-                    <a href=""><img src="imagenes/caratulas/heroes/Spider-Man-sin-camino-a-casa.jpg" alt="Spider-Man" class="caratula">
-                    <p>Spiderman</p>
+                    <a href="peliculas/heroes/spidermanNWH.html"><img src="imagenes/caratulas/heroes/Spider-Man-sin-camino-a-casa.jpg" alt="Spider-Man" class="caratula"></a>
+                    <p class="p-texto">Spiderman</p>
                 </div>
                 <div class="pelicula cinco">
-                    <a href=""><img src="imagenes/caratulas/heroes/venom-2.0.JPG" alt="Nobody" class="caratula">
-                    <p>Nadie</p>
+                    <a href="peliculas/heroes/venom.html"><img src="imagenes/caratulas/heroes/venom-2.0.JPG" alt="Nobody" class="caratula"></a>
+                    <p class="p-texto">Nadie</p>
                 </div> 
             </div>
-            <h2>Animación</h2>
+            <h2 class="subtitulo">Animación</h2>
             <div class="animacion">
                 <div class="pelicula uno">
-                    <a href="peliculas/animacion/dbsbroly.html"><img src="imagenes/caratulas/animacion/dbz-broly.jpg" alt="DBS Broly" class="caratula">
-                    <p>Dragon Ball Super Broly</p>
+                    <a href="peliculas/animacion/dbsbroly.html"><img src="imagenes/caratulas/animacion/dbz-broly.jpg" alt="DBS Broly" class="caratula"></a>
+                    <p class="p-texto">Dragon Ball Super Broly</p>
                 </div>
                 <div class="pelicula dos">
-                    <a href="peliculas/animacion/dbz-golpedragon.html"><img src="imagenes/caratulas/animacion/dbz-golpedragon.png" alt="DBZ GD" class="caratula">
-                    <p>Dragon Ball Z El Golpe del Dragon</p>
+                    <a href="peliculas/animacion/dbz-golpedragon.html"><img src="imagenes/caratulas/animacion/dbz-golpedragon.png" alt="DBZ GD" class="caratula"></a>
+                    <p class="p-texto">Dragon Ball Z El Golpe del Dragon</p>
                 </div>
                 <div class="pelicula tres">
-                    <a href="peliculas/animacion/gatoconbotas.html"><img src="imagenes/caratulas/animacion/Gato-con-botas-el-ultimo-deseo.jpg" alt="Gato con botas" class="caratula">
-                    <p>Gaton con Botas el Ultimo Deseo</p>
+                    <a href="peliculas/animacion/gatoconbotas.html"><img src="imagenes/caratulas/animacion/Gato-con-botas-el-ultimo-deseo.jpg" alt="Gato con botas" class="caratula"></a>
+                    <p class="p-texto">Gaton con Botas el Ultimo Deseo</p>
                 </div>
                 <div class="pelicula cuatro">
-                    <a href="peliculas/animacion/KungFuPanda.html"><img src="imagenes/caratulas/animacion/kung-fu-panda.jpg" alt="KFP" class="caratula">
-                    <p>Kung Fu Panda</p>
+                    <a href="peliculas/animacion/KungFuPanda.html"><img src="imagenes/caratulas/animacion/kung-fu-panda.jpg" alt="KFP" class="caratula"></a>
+                    <p class="p-texto">Kung Fu Panda</p>
                 </div>
                 <div class="pelicula cinco">
-                    <a href="peliculas/animacion/minions.html"><img src="imagenes/caratulas/animacion/minions-nace-un-villano.jpg" alt="Minions" class="caratula">
-                    <p>Minions</p>
+                    <a href="peliculas/animacion/minions.html"><img src="imagenes/caratulas/animacion/minions-nace-un-villano.jpg" alt="Minions" class="caratula"></a>
+                    <p class="p-texto">Minions</p>
                 </div>
                 <div class="pelicula seis">
-                    <a href="peliculas/animacion/spidermannewuni.html"><img src="imagenes/caratulas/animacion/Spider-Man-un-nuevo-universo.jpeg" alt="Spider-Man" class="caratula">
-                    <p>Spider-Man Un Nuevo Universo</p>
+                    <a href="peliculas/animacion/spidermannewuni.html"><img src="imagenes/caratulas/animacion/Spider-Man-un-nuevo-universo.jpeg" alt="Spider-Man" class="caratula"></a>
+                    <p class="p-texto">Spider-Man Un Nuevo Universo</p>
                 </div>  
                 <div class="pelicula siete">
-                    <a href="peliculas/animacion/kimetsu.html"><img src="imagenes/caratulas/animacion/tren-infinito.jpg" alt="Kimetsu" class="caratula">
-                    <p>Demon Slayer El Tren Infinito</p>
+                    <a href="peliculas/animacion/kimetsu.html"><img src="imagenes/caratulas/animacion/tren-infinito.jpg" alt="Kimetsu" class="caratula"></a>
+                    <p class="p-texto">Demon Slayer El Tren Infinito</p>
                 </div> 
             </div>
         </main>

@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -5,6 +6,7 @@
 /* Pantall principal */
 body {
     background-color: #000;
+    /* overflow-x: hidden; */
 }
 
 .estrenos, .accion, .comedia, .heroe, .animacion {
@@ -14,6 +16,7 @@ body {
 }
 
 .header-principal {
+    /* border: 1px solid red; */
     grid-area: cabeza;
     background: url(../imagenes/the-batman-dc-darkness-4k-0o-1920x1080.jpg) no-repeat;
     background-size: cover ;
@@ -36,6 +39,12 @@ footer {
     width: 50px;
 }
 
+.contenedor-logo {
+    display: flex;
+    text-align:end;
+}
+
+
 .imagen-logo {
     right: -100px;
     width: 175px;
@@ -52,19 +61,28 @@ a {
     
 }
 
-h1, h2, h3, h4, p, a {
+.titulo-pelicula, .sub-temas, .subtitulo, .p-texto {
     color: #fff;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
-h2 {
+.subtitulo {
+    margin-top: 30px;
+}
+
+.casita-principal, .configuracion-principal {
+    width: 40px;
+}
+
+.subtitulo {
     text-align: start;
     margin-left: 50px;
+    margin-bottom: 10px;
 }
 
 p{
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .p-texto {
@@ -91,15 +109,18 @@ button {
 }
 
 .logo-individual {
-    width: 250px;
+    width: 40%;
 }
 
-.contenedor-info, .imagenArriba {
-    margin-left: 100px;
+.contenedor-menu {
     display: flex;
-    flex-wrap: nowrap;
-    /* width:  100%; */
-    height: auto;
+    justify-content: space-between;
+}
+
+.contenedor-info {
+    display: flex;
+    margin-left: 100px;
+    margin-bottom: 50px;
 }
 
 .contenedor-a {
@@ -114,17 +135,19 @@ button {
 button {
     display: none;
 }
-
-.imagenArriba {
-    width: 100%;
+.informacion-sobre-pelicula {
+    /* border: 1px solid red; */
+    width: 700px;
+    
 }
-
 .info {
     margin-left: 60px;
+    margin-top: 90px;
+
 }
 
 .imagen {
-    align-items: center;
+    /* align-items: center; */
     width: 400px;
     display: flex;
     justify-content: flex-end;
@@ -140,29 +163,43 @@ button {
 
 .navMenu a {
     list-style: none;
-    margin: 0 10px;
+    margin: 0 30px;
     color: #fff;
+    font-size: 22px;
     text-decoration: none;
+    /* background-color: #fff; */
+    transition: 1s;
+}
+
+.navMenu:hover a {
+    /* color: #575757; */
+    transition: 1s;
+}
+
+.navMenu:hover a:hover {
+    color: #5193df;
+    /* box-shadow: 0 2px 0 0; */
+    transition: 1s;
+    border-bottom: 0.5px solid #5193df;
+}
+
+.boton, .ver {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
 }
 
 .contenedor-trailerTicket {
-    position: relative;
+  
+    width: 300px;
     display: flex;
-    margin: 0 auto;
-    /* float: right; */
-    /* width: 100%; */
-    /* top: 500px;  */
-    /* right: 400px; */
+    justify-content: center;
+    align-items: center;
  }
-
-
-.contenedor-trailer, .contenedor-ticket {
-    position: relative;
-    display: flex;
-    /* float: right; */
-    /* align-content: space-around; */
-    /* justify-content: space-around; */
-} 
+ .contenedor-trailerTicket button {
+    margin: 4px;
+ }
 
 .ver {
     display: flex;
@@ -170,23 +207,55 @@ button {
     left: 17px;
     top: 0;
     height: 46px;
+    background-color: #1A1E27;
+    color: #fff;
+    border-radius: 15px;
+    transition: 0.2s all;
+    cursor: pointer;
+    align-items: center;
 } 
+
+
+.ver:hover {
+    background-color: #024da1;
+    transition: .2s all;
+    text-decoration: underline;
+}
 
 .botones {
     display: flex;
-    position: relative;
-    align-content: center;
-    justify-content: center;
+    height: 65%;
+   
+
     
 } 
 
 .boton {
     /* position: relative; */
     display: flex;
-    /* align-content: center; */
-    /* justify-content: center; */
+    align-content: center;
+    justify-content: center;
+    background-color: #1A1E27;
+    color: #fff;
+    border-radius: 15px;
+    transition: 0.2s all;
+    cursor: pointer;
+    /* text-decoration-line: underline; */
 }
 
-.texto, .sub-temas,.titulo-pelicula {
+
+.boton:hover {
+    background-color: #024da1;
+    transition: .2s all;
+    text-decoration: underline;
+}
+
+.texto, .sub-temas, .titulo-pelicula {
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: justify;
+}
+
+.titulo-pelicula {
+    font-size: 28px;
 }

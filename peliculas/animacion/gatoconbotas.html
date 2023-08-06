@@ -15,21 +15,27 @@
     <main class="main-contendor">
         <header class="contenedor-header">
             <div class="navMenu">
-                <a href="#paginaPrincipal">Back</a>
-                <a href="#paginaHome">Home</a>
-                <a href="#configuracion">Configuracion</a>
+                <a href="../../pagina_principal.html"><img src="../../navegacion/home.svg" alt="" class="casita-principal"></a>
+                <a href="../../configuracion.html"><img src="../../navegacion/settings.svg" alt="" class="configuracion-principal"></a>
+                <a href="notificacion.html"><img src="../../navegacion/notifications.svg" alt="" class="configuracion-principal"></a>
             </div>
             <!-- Logo -->
-            <div class="imagen">
-                <a href="../../index.html"><img src="../../logo.png" alt="Logo" class="logo-individual"></a>
+            <div class="contenedor-logo">
+                <a href="../../pagina_principal.html"><img src="../../logo.png" alt="Logo" class="logo-individual"></a>
             </div>
         </header>
         <!-- Contenedor de la información principal -->
-        <div class="contendor-info">
+        <div class="contenedor-info">
             <div class="imagenArriba">
+                <figure class="contenedor-a">
                     <img src="../../imagenes/caratulas/animacion/Gato-con-botas-el-ultimo-deseo.jpg" alt="Gato Con bota" class="imagen">
-                <section class="info">
-                    <h4 class="titulo-pelicula">Gato con Boras El Último Deseo</h4>
+                </figure>
+            </div>
+            <div class="informacion-sobre-pelicula">
+                <div class="info">
+                    <h4 class="titulo-pelicula">Gato con Botas El Último Deseo</h4>
+                    <h3 class="sub-temas">Sinopsis:</h3>
+                    <p class="texto">Mucho antes de conocer a Shrek, el Gato con botas, recién nombrado héroe por salvar a una mujer de la embestida de un toro, tiene que huir de la ciudad cuando comienzan a sospechar que ha robado un banco, aunque el verdadero villano es su amigo Humpty Dumpty. Tiempo después y a pesar de que todavía existe un enfrentamiento entre ellos, ambos se reúnen para robar el famoso ganso de los huevos de oro. En su aventura les ayudará la famosa ladrona felina, Kitty Zarpas Suaves.</p>
                     <h3 class="sub-temas">Genero:</h3>
                     <p class="texto">Animación</p>
                     <h3 class="sub-temas">Clasificacion:</h3>
@@ -38,25 +44,14 @@
                     <p class="texto">Antonio Banderas, Salma Hayek, Harvey Guillén, Florence Pugh Olivia Colman, Ray Winstone, Samson Kayo, John Mulaney</p>
                     <h3 class="sub-temas">Escritores:</h3>
                     <p class="texto">Antonio Banderas, Salma Hayek, Tom Wheeler, Januel Mercado</p>
-                </section>
-            </div>
-            <!-- Contenedor de los botones e iconos de trailer y ver información -->
-            <section class="contenedor-trailerTicket">
-                <div class="contendor-trailer">
-                    <figure>
-                        <a href="#vertrailer"><img src="../../navegacion/play.svg" alt="" width="50" height="50"></a>
-                    </figure>
-                    <button type="button">Ver Trailer</button>
                 </div>
+                <div class="contenedor-trailerTicket">
+                    <button type="button" class="ver"> Ver Trailer</button>
+                    <button type="button" class="ver">Comprar ticket</button>
 
-                <div class="contendor-ticket">
-                    <figure>
-                        <a href="#comprarTicket"><img src="../../navegacion/ticket.svg" alt="" width="50"
-                                height="50"></a>
-                    </figure>
-                    <button type="button">Comprar ticket</button>
+
                 </div>
-            </section>
+            </div>
         </div>
     </main>
 
