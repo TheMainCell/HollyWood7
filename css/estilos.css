@@ -205,7 +205,11 @@
 iframe {
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
+/* iframe::-webkit-scrollbar {
+    display: none;
+} */
 
 /* /////////////////////////////micuenta//////////////////////////////////// */
 /* Header */
@@ -346,14 +350,18 @@ iframe {
     left: 30%;
     top: 45%;
     width: 380px;
-    height: 150px;
+    height: 250px;
     border-radius: 5px;
     background-color: var(--fondo);
     text-align: center;
     padding: 20px;
 }
 .eliminar-cuenta h3 {
-    margin-bottom: 10px;
+   margin: 5px;
+}
+.eliminar-cuenta p {
+    margin: 15px;
+    font-weight: 300;
 }
 .eliminar-cuenta a {
     text-decoration: none;
@@ -363,10 +371,20 @@ iframe {
     border-radius: 5px;
     margin: 10px;
 }
-
-.eliminar-cuenta a:hover {
+/* No sabía que funcionaría */
+.eliminar-cuenta [target="_parent"]:hover {
+    background-color: red;
+}
+.eliminar-cuenta img {
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    border-radius: 5px;
+}
+/* Boton para cerrar cuenta rojo */
+.cerrar:hover {
     background-color: rgb(0, 119, 255);
-    
+
 }
 /* //////////////// Pagina para editar los datos del usuario dentro de micuenta ///////////  */
 
@@ -568,6 +586,10 @@ h1 {
     text-align: justify;
     margin: 20px;
 }
+/* ///////////////////////////////////notificaciones config/////////////////////////////////////// */
+.header-de-notificiones-config {
+    border: 1px solid red;
+}
 
 /* ///////////////////////////////////contacto/////////////////////////////////////// */
 /* Contenedor principal */
@@ -648,6 +670,7 @@ p {
 
 /* /////////////////////////////salircuenta//////////////////////////////////// */
 .salir {
+    border: 1px solid red;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -655,21 +678,21 @@ p {
     color: #FFF;
 }
 
-.salir h2 {
-    padding: 50px;
+.salir h2, p {
+    /* padding: 50px; */
     text-align: center;
 }
 .boton {
     display: flex;
     justify-content: center;
 }
-.boton_1 {
+.boton_1, .boton_2 {
     text-decoration: none;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #505257;
+    background-color: #272829;
     width: 100px;
     height: 50px;
     margin: 10px;
@@ -680,6 +703,9 @@ p {
 .boton_1:hover {
 
     background-color: rgb(28, 116, 216);
+}
+.boton_2:hover {
+    background-color: red;
 }
 
 /* /////////////////////////////Notificaciones//////////////////////////////////// */
