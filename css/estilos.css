@@ -1,4 +1,62 @@
+/* NOTIFICACIONES */
+.header-de-notificaciones {
+    display: flex;
+    justify-content: space-around;
+} 
+
+.header-de-notificaciones img {height: 120px;}
+
+.titulo h2, .notificacion-desact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+}
+
+.notificacion-desact input {margin: 10px;}
+
+/* La parte del cuerpo de notificaciones */
+.articulos-de-notificaciones {
+    display: flex;
+    flex-direction: column; 
+}
+
+.secciones-de-notificaciones {
+    justify-content: space-around;
+    border: 1px solid rgb(31, 29, 29);
+    border-radius: 5px;
+    display: flex; 
+}
+
+.secciones-de-notificaciones img {height: 150px;}
+
+.informaciones-notificaciones {
+    margin: 0 auto;
+    align-self: center;
+    font-size: 20pt;
+}
+
+.informaciones-notificaciones p {text-align: start;}
+
+.imagen-pelicula-comprada {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.titular {
+    font-size: 24pt;
+    font-weight: 700;
+}
+
+.mensaje {font-weight:lighter;}
 /* CONFIGURACIÓN */
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
 
 /* Estilos para todos */
 * {
@@ -7,12 +65,15 @@
     margin: 0;
 }
 
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////// */
+
 /* Colores */
 :root {
     --fondo: #1A1E27;
     --hover: #2b2b2c;
 }
-
 
 /* Este es el estilo que tendran las todas las paginaes */
 .cuerpo-oscuro {
@@ -20,7 +81,6 @@
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 /* /////////////////////////////configuracion///////////////////////////////////////// */
 /* Colores */
@@ -37,9 +97,7 @@
 }
 
 /* Contenedor donde se ubucan los dos div almacenados */
-.container {
-    display: flex;
-}
+.container {display: flex;}
 
 /* Donde estan todos los links */
 .sidebar-right {
@@ -57,12 +115,10 @@
 }
 
 .sidebar-right>nav {
-
     height: 300px;
     display: flex;
     flex-wrap: wrap;
     place-items: center;
-
 }
 
 
@@ -79,7 +135,6 @@
     font-size: 18px;
     color: white;
     transition: all .2s;
-
 }
 
 /* Hover de los links */
@@ -90,10 +145,7 @@
 }
 
 /* Links con iconos */
-.sidebar-right nav a, i {
-    padding: 3px;
-
-}
+.sidebar-right nav a, i {padding: 3px;}
 
 /* Cabecera */
 
@@ -114,9 +166,7 @@
     font-size: 30px;
 }
 
-.header-para-navegar > a {
-    color: #FFF;
-}
+.header-para-navegar > a {color: #FFF;}
 
 /* Mi perfil para previzualizar */
 .perfil {
@@ -124,13 +174,11 @@
     width: 340px;
     cursor: pointer;
     margin: 15px auto;
-    /* border: 1px solid orange; */
     display: flex;
     place-content: center;
     background-color: #1A1E27;
     border-radius: 10px;
     transition: all .2s;
-
 }
 
 /* Hover de perfil */
@@ -147,7 +195,6 @@
     position: relative;
     top: -15%;
     right: 20%;
-
 }
 
 .perfil>a {
@@ -156,23 +203,16 @@
     right: 20%;
     margin: 16px 0px 0 10px;
     flex-wrap: wrap;
-    /* border: 1px solid; */
     place-content: center;
     text-decoration: none;
 }
 
-/*  */
 
 .perfil a>span {
-    /* border: 1px solid; */
-
-
     color: #ffffff;
     display: flex;
     justify-content: start;
     align-items: center;
-
-
 }
 
 /* Barra para separar */
@@ -181,21 +221,10 @@
     width: 200px;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* El area de la pantalla donde se visualizan las opciones */
 .sidebar-left {
     margin: 0px 10px;
     padding: 20px;
-    /* border: 1px solid; */
     width: 1000px;
     height: 650px;
     color: #fff;
@@ -207,9 +236,6 @@ iframe {
     height: 100%;
     overflow: hidden;
 }
-/* iframe::-webkit-scrollbar {
-    display: none;
-} */
 
 /* /////////////////////////////micuenta//////////////////////////////////// */
 /* Header */
@@ -219,21 +245,17 @@ iframe {
 }
 
 .header-de-cuenta img {
-    /* border: 1px solid red; */
     max-width: 500px;
     width: 15%;
-    
 }
 
 .header-de-cuenta .bx {
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
     height: 120px;
     width: 80px;
- 
 }
 /* Main contenedor */
 .contenedor-DP {
@@ -243,14 +265,15 @@ iframe {
     flex-direction: column;
     transition: .3s
 }
-.contenedor-DP h1 {
-    text-align: center;
-}
+
+.contenedor-DP h1 {text-align: center;}
+
 .contenedor-datos-personales {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .nombre-de-usuario, .correo-electronico {
     display: flex;
     flex-direction: column;
@@ -268,15 +291,15 @@ iframe {
     text-decoration: none;
     padding: 8px 20px;
 }
+
 .boton_de_DT {
     background-color: #505257;
     border-radius: 5px;
     transition: all .2s;
     
 }
-.boton_de_DT:hover {
-    background-color: var(--hover);
-}
+
+.boton_de_DT:hover {background-color: var(--hover);}
 
 /* Separador */
 .separador-de-usuario {
@@ -286,19 +309,17 @@ iframe {
     margin: 20px;
 }
 
-
 /* Cuenta de usuario */
 .contenedor-de-usuario {
     display: flex;
     flex-direction: column;
 } 
+
 .contenedor-de-usuario h2 {
     text-align: start;
     margin-left: 140px;
     font-size: 15pt;
 }
-
-
 
 .cuenta-de-usuario {
     display: flex;
@@ -311,16 +332,14 @@ iframe {
     align-self: center;
     text-align: center;
     justify-content: space-evenly;
-
 }
 .editar-contrasena a, .editar-usuario a {
     color: #FFF;
     display: flex;
     text-decoration: none;
     font-size: 15pt;
-
-
 }
+
 #boton-delete {
     margin: 10px auto;
     display: block;
@@ -332,15 +351,11 @@ iframe {
     cursor: pointer;
     transition: all .2s;
 }
-#boton-delete:hover {
-    background-color: var(--hover);
-}
 
+#boton-delete:hover {background-color: var(--hover);}
 
+.a-eliminar {text-decoration: none;}
 
-.a-eliminar {
-    text-decoration: none;
-}
 /* Este es el modal de eliminar cuenta */
 /* Contenedor del modal de HTML */
 
@@ -356,13 +371,14 @@ iframe {
     text-align: center;
     padding: 20px;
 }
-.eliminar-cuenta h3 {
-   margin: 5px;
-}
+
+.eliminar-cuenta h3 {margin: 5px;}
+
 .eliminar-cuenta p {
     margin: 15px;
     font-weight: 300;
 }
+
 .eliminar-cuenta a {
     text-decoration: none;
     background-color: #131414;
@@ -371,48 +387,50 @@ iframe {
     border-radius: 5px;
     margin: 10px;
 }
+
 /* No sabía que funcionaría */
 .eliminar-cuenta [target="_parent"]:hover {
     background-color: red;
 }
+
 .eliminar-cuenta img {
     width: 100px;
     height: 40px;
     background-color: red;
     border-radius: 5px;
 }
-/* Boton para cerrar cuenta rojo */
-.cerrar:hover {
-    background-color: rgb(0, 119, 255);
 
-}
+/* Boton para cerrar cuenta rojo */
+
+.cerrar:hover { background-color: rgb(0, 119, 255);}
+
 /* //////////////// Pagina para editar los datos del usuario dentro de micuenta ///////////  */
 
 .main-de-credenciales {
     display: flex;
-    /* border: 1px solid white; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .header-de-credenciales {
-    /* border: 1px solid white; */
     height: 120px;
     display: flex;
     justify-content: space-between;
-    /* border-bottom: 1px solid white; */
 }
+
 .header-de-credenciales img {
     display: none;
     height: 120px;
 }
+
 .header-de-credenciales i {
-    /* border: 1px solid; */
     font-size: 35px;
     color: white;
     display: flex;
     align-items: center;
 }
+
 .titulo h1 {
     margin: 0;
     font-size: 25pt;
@@ -421,46 +439,39 @@ iframe {
     color: white;
 }
 
-.titulo {
-    /* border: 1px solid white; */
-    display: flex;
-}
-/* Contenido de Credenciales*/
-/* boton salir  */
-.boton-salir {
-    /* width: 850px; */
-    float: left;
-}
+.titulo {display: flex;}
+
+.boton-salir {float: left;}
+
 .boton-salir i{
     color: white;
     font-size: 40px;
 }
 
-.lapiz .bx{
-    color: rgba(28, 116, 216,0);
-}
+.lapiz .bx{color: rgba(28, 116, 216,0);}
+
 .contenedor-foto-nombre, .usuario-contrasena{
     display: flex;   
     align-self: center;
-    /* width: 90%; */
     flex-direction: column;
     background-color: #1A1E27;
     margin: 0 0 20px 0;
     border-radius: 10px;
 }
-.contenedor-foto-nombre figure {
 
+.contenedor-foto-nombre figure {
     display: flex;
     margin: 20px;
 }
+
 .contenedor-foto-nombre figure img {
     object-fit:cover;
     border-radius: 50%;
     height: 80px;
     width: 80px;
 }
+
 .contenedor-foto-nombre figcaption {
-    /* border: 1px solid black; */
     align-self: center;
     margin: 0 10px;
 }
@@ -470,10 +481,8 @@ iframe {
 }
 
 /* El formulario  */
-.contenedor-foto-nombre form {
-    margin: 0 20px 20px 25px;
+.contenedor-foto-nombre form {margin: 0 20px 20px 25px;}
 
-}
 .contenedor-foto-nombre form input, .usuario-contrasena form input, .contenedor-usuario-DP form input {
     color: white;
     padding: 8px 10px;
@@ -487,7 +496,6 @@ iframe {
 
 /* Contenedor del correo electronico */
 .contenedor-usuario-DP {
-    /* border: 1px solid white; */
     background-color: #1A1E27;
     height: 100px;
     width: 440px;
@@ -499,17 +507,13 @@ iframe {
 }
 
 .contenedor-usuario-DP form {
-    /* border: 1px solid white; */
     display: flex;
     color: white;
     justify-content: center;
     align-items: center;
 }
 
-
-.contenedor-usuario-DP form input {
-    width: 180px;
-}
+.contenedor-usuario-DP form input {width: 180px;}
 
 /* Separador */
 .separador-DP {
@@ -525,30 +529,24 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid white; */
     color: white;
     height: 150px;
     width: 580px;
 }
+
 .usuario-contrasena form {
-    /* border: 1px solid white; */
     display: flex;
     justify-content: center;
 }
+
 .usuario-contrasena form label, .contenedor-usuario-DP label, .contenedor-foto-nombre form label {
     align-self: center;
     color: white;
     margin: 10px;
 }
 
-.usuario-contrasena form input {
-    width: 190px;
-}
+.usuario-contrasena form input {width: 190px;}
 
-.guardar-cambios {
-    /* border: 1px solid white; */
-    
-}
 .guardar-cambios button {
     background-color: black;
     color: #1DE6F3;
@@ -558,10 +556,9 @@ iframe {
     border: 0;
     transition: all .2s;
 }
-.guardar-cambios button:hover {
-    background-color: var(--hover);
 
-}
+.guardar-cambios button:hover {background-color: var(--hover);}
+
 /* /////////////////////////////ter_y_cond//////////////////////////////////// */
 
 /* Esta es la parte de los articles */
@@ -570,26 +567,20 @@ iframe {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
-.termYCond {
-    text-align: center;
-}
+.termYCond {text-align: center;}
 
-article {
-    display: flex;
-}
+.contenido_ter_y_cond article { display: flex;}
 
-article section,
-h1 {
+.contenido_ter_y_cond article, .contenido_ter_y_cond section, .contenido_ter_y_cond h1, .contenido_ter_y_cond p {
     text-align: justify;
+    border: 1px solid rgb(54, 49, 49);
+    border-radius: 10px;
+    padding: 3px;
     margin: 20px;
 }
-/* ///////////////////////////////////notificaciones config/////////////////////////////////////// */
-.header-de-notificiones-config {
-    border: 1px solid red;
-}
+
 
 /* ///////////////////////////////////contacto/////////////////////////////////////// */
 /* Contenedor principal */
@@ -600,7 +591,6 @@ h1 {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    /* border: 1px solid; */
     margin: 10px;
 }
 
@@ -611,9 +601,7 @@ h1 {
     margin: 0 auto;
 }
 
-.header-del-contacto h1 {
-    text-align: center;
-}
+.header-del-contacto h1 {text-align: center;}
 
 /* Cajas */
 .llamar {
@@ -628,14 +616,10 @@ h1 {
     cursor: pointer;
 }
 
-.llamar:hover {
-    background-color: var(--hover);
-}
+.llamar:hover { background-color: var(--hover);}
 
 .contenedor-de-contacto h2,
-p {
-    margin: 7px;
-}
+p {margin: 7px;}
 
 .ubicacion {
     height: 600px;
@@ -650,20 +634,14 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* border: 1px solid; */
     margin-bottom: 50px;
 }
 
-.header-de-ayuda img {
-    height: 180px;
-}
+.header-de-ayuda img {height: 180px;}
 
-.header-de-ayuda h1 {
-    font-size: 28pt;
-}
+.header-de-ayuda h1 {font-size: 28pt;}
 
 .main-de-ayuda p {
-    /* border: 1px solid; */
     text-align: justify;
     width: 669px;
 }
@@ -678,14 +656,13 @@ p {
     color: #FFF;
 }
 
-.salir h2, p {
-    /* padding: 50px; */
-    text-align: center;
-}
+.salir h2, p {text-align: center;}
+
 .boton {
     display: flex;
     justify-content: center;
 }
+
 .boton_1, .boton_2 {
     text-decoration: none;
     color: white;
@@ -700,19 +677,8 @@ p {
     transition: all .2s;
 }
 
-.boton_1:hover {
+.boton_1:hover {background-color: rgb(28, 116, 216);}
 
-    background-color: rgb(28, 116, 216);
-}
-.boton_2:hover {
-    background-color: red;
-}
-
-/* /////////////////////////////Notificaciones//////////////////////////////////// */
-/* ///////////////////////////// Version //////////////////////////////////// */
-
-
-
-
+.boton_2:hover { background-color: red;}
 
 /* ///////////////////////////////Responsive//////////////////////////////////// */

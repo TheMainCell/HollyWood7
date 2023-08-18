@@ -30,12 +30,14 @@
         <!-- En este solo va el nombre y la foto de perfil -->
         <div class="contenedor-foto-nombre">
             <figure>
-                <img src="../imagenes/hw7/foto-perfil-predeterminada.png" alt="foto de perfil">
-                <figcaption><a href="">Cambiar foto de perfil</a></figcaption>
+                <img src="../imagenes/hw7/foto-perfil-predeterminada.png" alt="foto de perfil" id="preview">
+                <figcaption>
+                    <input type="file" id="cambiar">Cambiar foto de perfil
+                </figcaption>
             </figure>
             <form action="">
                 <label for="nombre">Nombre</label>
-                <input type="text" placeholder="Josefinito" autofocus="autofocus"> 
+                <input type="text" placeholder="Josefinito" autofocus="autofocus" > 
             </form>
         </div>
 
@@ -46,20 +48,15 @@
         <div class="contenedor-usuario-DP">
             <form action="">
                 <label for="correo">Correo electronico</label>
-                <input type="email" placeholder="usuario005@gmail.com">
+                <input type="email" placeholder="usuario005@gmail.com" disabled>
             </form>
         </div>
-
-
-
-
         <!-- Este es simplemente un separador  -->
         <div class="separador-DP">
             <hr>
             <h3>Cuenta de usuario</h3>
         </div>
         <!-- Aqui solo alojare el nombre de usuario y su contrasena, el correo sea otro metodo para iniciar sesion aparte del nombre de usuario, tambien cuando se vaya a realizar un cambio puede usar ese correo para enviar un mensaje que para que confirme si es el y que confirme los cambios que el ususario desea realizar -->
-
         <div class="usuario-contrasena">
             <form action="">
                 <label for="usuario">Usuario</label>
@@ -68,12 +65,30 @@
                 <input type="password" placeholder="************">
             </form>
         </div>
-
         <!-- Boton para guardar cambios -->
         <div class="guardar-cambios">
             <button id="save-change">Guardar cambios</button>
         </div>
     </main>
-    <script src="../js/script.js"></script>
+
+
+
+
+
+    <script>
+        // Al parecer aqui es donde hare que esta pagina funcione
+        const $cambiarFoto = document.querySelector("#cambiar")
+        $cambiarFoto.addEventListener('change', () => {
+            
+        })
+
+
+    </script>
+
+
+
+
+
+
 </body>
 </html>

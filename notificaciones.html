@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,46 +9,66 @@
 
     <link rel="stylesheet" href="css/notificaciones.css">
 </head>
-<body>
-    <header class="header">
+<body class="cuerpo-oscuro">
+    <header class="header-de-notificaciones">
         <figure>
-            <a href="#"><img src="imagenes/logo.jpg" alt="logo de WH7"></a>
+            <a href="#"><img src="imagenes/hw7/logo.png" alt="logo de WH7"></a>
         </figure>
-        <i></i>
-        <!-- Con la etiqueta <i> se colocara el icono de notificaciones -->
-            
-            <!-- El apartado de notificacion completo es ya cosa de JS, por lo que simplemente voy a colocar los elementos que yo vea en el figma, eso es lo que he estado haciendo, alguna duda, pueden decirlo, pero por ahora esto es lo que he estado haciendo, sorry. -->
+        <div class="titulo">
+            <h2>Notificaciones</h2>
+        </div>
+        <div class="notificacion-desact">
+            <label for="desactivar">Desactivar notificaciones</label>
+            <input type="checkbox" id="desactivar">
+        </div>
+
+    </header>
+    <!-- Header listo ya-->
     <main>
-        <article>
-            <section>
-                <img src="imagenes/logo.jpg" alt="logo de hw7">
-                <h2>HW7</h2>
-                <p>Tiket comprado</p>
-                <p>The Avengers</p>
-                <!-- Con JS se hara el "Hace dos dias" -->
+        <article class="articulos-de-notificaciones">
+            <section class="secciones-de-notificaciones">
+                <figure>
+                    <img src="imagenes/tiket_comprado.png" alt="logo de hw7">
+                </figure>
+                <div class="informaciones-notificaciones">
+                    <p class="titular">Tiket comprado!</p>
+                    <p class="mensaje">Has adquirido una taquilla para ver<span> The Avengers </span class="nombre-pelicula-comprada"> hace<span> 12 </span>días</p>
+                </div>
+                <div class="imagen-pelicula-comprada">
+                    <img src="/imagenes/peliculas/the-batman-dc-darkness-4k-0o-1920x1080.jpg" alt="">
+                 </div>
+                <!-- Con JS se hara el "Hace n dias" -->
             </section>
-            <section>
-                <img src="imagenes/logo.jpg" alt="logo de hw7">
-                <h2>HW7</h2>
-                <p>Tiket comprado</p>
-                <p>The Avengers</p>
-                <!-- Con JS se hara el "Hace dos dias" -->
+            <section class="secciones-de-notificaciones">
+                <img src="imagenes/cinema_home.png" alt="cine">
+                <div class="informaciones-notificaciones">
+                    <p class="titular">Peliculas en estrenos ya!</p>
+                    <p>Ven ya a ver<span> The Avengers </span class="nombre-pelicula-comprada"> este<span> 12 </span>de<span> septiembre </span></p>
+                </div>
+                <div class="imagen-pelicula-comprada">
+                    <img src="/imagenes/peliculas/gatoConBotas.jpg" alt="">
+                 </div>
             </section>
-            <section>
-                <img src="imagenes/logo.jpg" alt="logo de hw7">
-                <h2>HW7</h2>
-                <p>Tiket comprado</p>
-                <p>The Avengers</p>
-                <!-- Con JS se hara el "Hace dos dias" -->
+            <section class="secciones-de-notificaciones">
+                <img src="imagenes/hw7/logo.png" alt="logo de hw7">
+                <div class="informaciones-notificaciones">
+                    <p class="titular">Tiket comprado!</p>
+                    <p>Has adquirido una taquilla para ver<span> The Avengers </span class="nombre-pelicula-comprada"> hace<span> 12 </span>días</p>
+                </div>
+                <div class="imagen-pelicula-comprada">
+                    <img src="/imagenes/peliculas/SpiderMan.jpeg" alt="">
+                 </div>
             </section>
-            <section>
-                <img src="imagenes/logo.jpg" alt="logo de hw7">
-                <h2>HW7</h2>
-                <p>Tiket comprado</p>
-                <p>The Avengers</p>
-                <!-- Con JS se hara el "Hace dos dias" -->
-            </section>
-           
+            <section class="secciones-de-notificaciones">
+                <img src="imagenes/hw7/logo.png" alt="logo de hw7">
+                <div class="informaciones-notificaciones">
+                    <p class="titular">Tiket comprado!</p>
+                    <p>Has adquirido una taquilla para ver<span> The Avengers </span class="nombre-pelicula-comprada"> hace<span> 12 </span>días</p>
+                </div>
+                <div class="imagen-pelicula-comprada">
+                    <img src="/imagenes/peliculas/dbzBorly.jpg" alt="">
+                 </div>
+            </section> 
         </article>
     </main>
     <script src="js/script.js"></script>
