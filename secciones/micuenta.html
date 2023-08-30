@@ -10,43 +10,47 @@
     <link rel="icon" href="../imagenes/favicon.jpg">
 </head>
 <body class="cuerpo-oscuro">
-
-
     <header class="header-de-cuenta">
         <img src="../imagenes/hw7/logo.png" alt="logo"> 
-    </header> 
-    <main class="contenedor-DP">
         <h1>Datos Personales</h1>
+    </header> 
+
+
+    <main class="contenedor-DP">
+        <!-- Estas son las cajas -->
+
         <div class="contenedor-datos-personales">
+            <!-- Sacare solo lo que esta comentado -->
+            <figure>
+                <img src="../imagenes/hw7/foto-perfil-predeterminada.png" alt="foto de perfil" id="img">
+                <figcaption>
+                    <input type="file" id="foto" name="foto" class="escribir_datos">Cambiar foto de perfil
+                </figcaption>
+            </figure>
+<!-- Esto se hizo de esta manera sin el label porque a partir de la base de datos es que nosotros vamos rellenar con informacion verdadera y con datos del usuario que este dentro de la BD, por lo tanto tendran un placeholder por ahora pero esto obviamente esta sujeto a cambios asi que si se encuentran alguna inconsistencia con esto o algun problema, favor de hablar con Cristian para que se aclaren todas esas dudas -->
             <div class="nombre-de-usuario">
-                <a href="../secciones/editarCredenciales.html"  >Jose Josefinito</a> 
+                <input type="text" class="escribir_datos" placeholder="      no hay nada agregado a la ">
             </div>
+            
             <div class="correo-electronico">
-                <a href="../secciones/editarCredenciales.html">usuario@gmail.com</a>
+                <input type="email" class="escribir_datos" placeholder="      no hay nada agregado a la " >
             </div>
+
+            <div class="editar-usuario">
+                    <input type="text" class="escribir_datos" placeholder="      no hay nada agregado a la ">
+            </div>
+
+            <div class="editar-contrasena">
+                <input type="password" class="escribir_datos" placeholder="      no hay nada agregado a la ">
+            </div>
+            <div class="confirmar_cambios">
+                <button>Guardar cambios</button>
+            </div>
+
         </div>
 
-
-        <!-- Separador -->
-        <div class="separador-de-usuario">
-            <a href="../secciones/editarCredenciales.html" class="boton_de_DT">Editar perfil</a>
-        </div>
-
-        <!-- Cuenta de usuario -->
-        <div class="contenedor-de-usuario">
-            <h2>Cuenta de Usuario</h2>
-            <div class="cuenta-de-usuario">
-                <div class="editar-usuario">
-                    <a href="../secciones/editarCredenciales.html">usuario005</a>
-                    <a href="../secciones/editarCredenciales.html">Editar usuario</a>
-                </div>
-                <div class="editar-contrasena">
-                    <a href="../secciones/editarCredenciales.html">***********</a>
-                    <a href="../secciones/editarCredenciales.html">Editar contraseña</a>
-                </div>
-            </div>
             <button id="boton-delete" class="a-eliminar">Eliminar cuenta</button>
-        </div>
+
 
     </main>
 <!-- Esto es un modal -->
@@ -80,6 +84,17 @@
 
         });
 
+
+    </script>
+    <script src="../js/script.js"></script>
+    <script>
+        let abre = Array.from(document.getElementsByClassName('escribir_datos'));
+        let edita = document.getElementsByClassName('confirmar_cambios')[0];
+
+        abre.map(abra => {
+            abra.addEventListener('click', () => {
+            edita.classList.add('active')
+        })})
 
     </script>
 </body>
