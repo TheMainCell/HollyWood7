@@ -17,13 +17,15 @@
         <header class="contenedor-header">
             <!-- Menú -->
             <div class="navMenu">
-                <a href="../../pagina_principal.html"><img src="../../navegacion/home.svg" alt="" class="casita-principal"></a>
-                <a href="../../configuracion.html"><img src="../../navegacion/settings.svg" alt="" class="configuracion-principal"></a>
-                <a href="notificacion.html"><img src="../../navegacion/notifications.svg" alt="" class="configuracion-principal"></a>
+                <a href="../../pagina_principal.html"><img src="../../navegacion/arrow_back.svg" class="back-principal actualApagado"></a>
+
+                <a href="../../pagina_principal.html"><img src="../../navegacion/home.svg" alt="" class="casita-principal actualApagado"></a>
+
+                <a href="configuracion.html"><img src="../../navegacion/settings.svg" alt="" class="configuracion-principal actualApagado"></a>
             </div>
             <!-- Logo -->
             <div class="contenedor-logo">
-                <a href="../../pagina_principal.html"><img src="../../logo.png" alt="Logo" class="logo-individual"></a>
+                <a href="../../pagina_principal.html"><img src="../../imagenes/logoFavicon/logo.png" alt="" class="logo-individual"></a>             
             </div>
         </header>
         <!-- Contenedor de la información principal -->
@@ -47,17 +49,30 @@
                     <h3 class="sub-temas">Escritores:</h3>
                     <p class="texto">Cheddy García, Carlos de la Mota, Freddyn Beras Goico</p>
                 </div>
-                <div class="contenedor-trailerTicket">
-                    <button type="button" class="ver"> Ver Trailer</button>
-                    <button type="button" class="ver">Comprar ticket</button>
+                 <div class="contenedor-trailerTicket">
+                        <button type="button" class="boton-trailer" id="boton-trailer"> Ver Trailer</button>
+                        <a href="../../compra/comprar.html"><button type="button" class="ver comprar">Comprar ticket</button></a>
 
 
+                    </div>
                 </div>
-            </div>
-            <!-- Contenedor de los botones e iconos de trailer y ver información -->
+            </div>                
         </div>
+        <script src="../../js/compras.js"></script>
     </main>
 
+    <div class="modal-trailer" id="modal-trailer">
+        <div class="contenido-trailer" id="contenido-trailer">
+                <div class="cerrar-trailer">
+                    <p class="boton-cerrar" id="boton-cerrar">X</p>
+                </div>
+            <div class="contenedor-trailer-titulo">
+                <h3 class="titulo-trailer">Pa' Que me Case</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/58ym3m3Df7g?si=11W2kQOg0KPh3LWh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/trailer.js"></script>
 </body>
 
 </html>
