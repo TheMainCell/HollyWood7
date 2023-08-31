@@ -5,7 +5,7 @@
     <title>Página Principal | HollyWood7</title>
     <link rel="icon" href="favicon-32x32.png">
     <link rel="stylesheet" href="css/estilos.css">
-     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <!-- Contenedor de toda la página -->
@@ -15,16 +15,32 @@
                 <div class="contenedor-menu">
                     <!-- Menú -->
                     <div class="navMenu">
-                        <a href="#pagina_principal.html"><img src="navegacion/home.svg" alt="" class="casita-principal"></a>
+                        <a href="#index.html"><img src="navegacion/arrow_back - copia.svg" class="back-principal desactivado"></a>
+                        <a href="#index.html"><img src="navegacion/home.svg" alt="" class="casita-principal actual"></a>
+
+                        <div class="categorias">
+                            <div class="contenedor-btn_cat.">
+                                <!-- <input class="btn-categorias" type="button" value="Categorias"> -->
+                                <img src="navegacion/categorias.svg" alt="" class="lista-principal">
+                            </div>
+                    
+                            <div class="categorias-content"> 
+                            <a href="peliculas/categorias/ctg-estrenos.html" class="link-categorias">Estrenos</a>
+                            <a href="peliculas/categorias/ctg-accion.html" class="link-categorias">Accion</a> 
+                            <a href="peliculas/categorias/ctg-animacion.html" class="link-categorias">Animacion</a> 
+                            <a href="#" class="link-categorias">Comedia</a>
+                            <a href="#" class="link-categorias">Heroes</a>
+                            </div>
+                        </div>
+
                         <a href="configuracion.html"><img src="navegacion/settings.svg" alt="" class="configuracion-principal"></a>
-                        <a href="notificacion.html"><img src="navegacion/notifications.svg" alt="" class="configuracion-principal"></a>
                     </div>
                     <div class="imagen-logo">
-                        <img src="logo.png" alt="Logo" class="imagen-logo">
+                        <img src="imagenes/logoFavicon/logo.png" alt="Logo" class="imagen-logo">
                     </div>
                 </div>
-            <div class="botones">
-                <a href="peliculas/heroes/theBatman.html"><button class="boton">Ver Información</button></a>
+            <div class="botones-principal">
+                <a href="peliculas/heroes/theBatman.html"><button class="boton-principal">Ver Información</button></a>
             </div>
         </header>
         <main>
@@ -35,11 +51,11 @@
                     <p class="p-texto">John Wick 3: Parabellum</p>
                 </div>
                 <div class="pelicula dos">
-                    <a href="peliculas/animacion/dbz-golpedragon.html"><img src="imagenes/caratulas/animacion/dbz-golpedragon.png" alt="Dbz" class="caratula">
+                    <a href="peliculas/animacion/dbz-golpedragon.html"><img src="imagenes/caratulas/animacion/dbz-golpedragon.png" alt="Dbz" class="caratula"></a>
                     <p class="p-texto">Dragon Ball Z Golpe del Dragón</p>
                 </div>
                 <div class="pelicula tres">
-                    <a href="peliculas/heroes/infinityWar.html"><img src="imagenes/caratulas/heroes/infinity-war.jpg" alt="Vengadores" class="caratula">
+                    <a href="peliculas/heroes/infinityWar.html"><img src="imagenes/caratulas/heroes/infinity-war.jpg" alt="Vengadores" class="caratula"></a>
                     <p class="p-texto">Los Vengadores: Infinty War</p>
                 </div>
                 <div class="pelicula cuatro">
@@ -48,25 +64,29 @@
                 </div>
             </div>
             <h2 class="subtitulo">Acción</h2>
+            <!-- <div class="scroll-accion">
+                <img src="navegacion/atras-scroll.svg" alt="atras" class="scroll-atras" id="scroll-atras">
+                <img src="navegacion/adelante-scroll.svg" alt="adelante" class="scroll-adelante" id="scroll-adelante">
+            </div> -->
             <div class="accion">
                 <div class="pelicula uno">
-                    <a href="peliculas/accion/johnWick3.html"><img src="imagenes/caratulas/accion/jonh-wick-3.jpg" alt="John Wick" class="caratula">
+                    <a href="peliculas/accion/johnWick3.html"><img src="imagenes/caratulas/accion/jonh-wick-3.jpg" alt="John Wick" class="caratula"></a>
                     <p class="p-texto">John Wick 3: Parabellum</p>
                 </div>
                 <div class="pelicula dos">
-                    <a href="peliculas/accion/agenteFortuna.html"><img src="imagenes/caratulas/accion/Agente-Fortune-el-gran-engaño.jpg" alt="Agente Fortune" class="caratula">
+                    <a href="peliculas/accion/agenteFortuna.html"><img src="imagenes/caratulas/accion/Agente-Fortune-el-gran-engaño.jpg" alt="Agente Fortune" class="caratula"></a>
                     <p class="p-texto">Agente Fortune</p>
                 </div>
                 <div class="pelicula tres">
-                    <a href="peliculas/accion/badBoys.html"><img src="imagenes/caratulas/accion/Bad-Boys-para-siempre.jpg" alt="Bad Boys" class="caratula">
+                    <a href="peliculas/accion/badBoys.html"><img src="imagenes/caratulas/accion/Bad-Boys-para-siempre.jpg" alt="Bad Boys" class="caratula"></a>
                     <p class="p-texto">Bad Boys</p>
                 </div>
                 <div class="pelicula cuatro">
-                    <a href="peliculas/accion/mortalKombat.html"><img src="imagenes/caratulas/accion/Mortal-Kombat.jpg" alt="MK" class="caratula">
+                    <a href="peliculas/accion/mortalKombat.html"><img src="imagenes/caratulas/accion/Mortal-Kombat.jpg" alt="MK" class="caratula"></a>
                     <p class="p-texto">Mortal Kombat</p>
                 </div>
                 <div class="pelicula cinco">
-                    <a href="peliculas/accion/nadie.html"><img src="imagenes/caratulas/accion/Nadie.jpg" alt="Nobody" class="caratula">
+                    <a href="peliculas/accion/nadie.html"><img src="imagenes/caratulas/accion/Nadie.jpg" alt="Nobody" class="caratula"></a>
                     <p class="p-texto">Nadie</p>
                 </div>
                 <div class="pelicula cinco">
@@ -153,7 +173,8 @@
                 <div class="pelicula siete">
                     <a href="peliculas/animacion/kimetsu.html"><img src="imagenes/caratulas/animacion/tren-infinito.jpg" alt="Kimetsu" class="caratula"></a>
                     <p class="p-texto">Demon Slayer El Tren Infinito</p>
-                </div> 
+                </div>
+                <script src="js/scroll.js"></script> 
             </div>
         </main>
         <!-- Pie de la página -->
