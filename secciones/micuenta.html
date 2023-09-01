@@ -22,26 +22,40 @@
         <div class="contenedor-datos-personales">
             <!-- Sacare solo lo que esta comentado -->
             <figure>
-                <img src="../imagenes/hw7/foto-perfil-predeterminada.png" alt="foto de perfil" id="img">
+                <img src="../imagenes/hw7/imagen_agregar.png" alt="foto de perfil" id="img">
                 <figcaption>
                     <input type="file" id="foto" name="foto" class="escribir_datos">Cambiar foto de perfil
                 </figcaption>
             </figure>
 <!-- Esto se hizo de esta manera sin el label porque a partir de la base de datos es que nosotros vamos rellenar con informacion verdadera y con datos del usuario que este dentro de la BD, por lo tanto tendran un placeholder por ahora pero esto obviamente esta sujeto a cambios asi que si se encuentran alguna inconsistencia con esto o algun problema, favor de hablar con Cristian para que se aclaren todas esas dudas -->
+            
             <div class="nombre-de-usuario">
-                <input type="text" class="escribir_datos" placeholder="      no hay nada agregado a la ">
+                <fieldset class="fieldset">
+                    <legend class="legend">Nombre</legend>
+                    <input type="text" class="escribir_datos" placeholder="      no hay nada agregado a la ">
+
+                </fieldset>
             </div>
             
             <div class="correo-electronico">
+                <fieldset class="fieldset">
+                    <legend class="legend">Correo electronico</legend>
                 <input type="email" class="escribir_datos" placeholder="      no hay nada agregado a la " >
+                </fieldset>
             </div>
 
             <div class="editar-usuario">
+                <fieldset class="fieldset">
+                    <legend class="legend">Usuario</legend>
                     <input type="text" class="escribir_datos" placeholder="      no hay nada agregado a la ">
+                </fieldset>
             </div>
 
             <div class="editar-contrasena">
+                <fieldset class="fieldset">
+                    <legend class="legend">Constraseña</legend>
                 <input type="password" class="escribir_datos" placeholder="      no hay nada agregado a la ">
+                </fieldset>
             </div>
             <div class="confirmar_cambios">
                 <button>Guardar cambios</button>
@@ -53,7 +67,12 @@
 
 
     </main>
-<!-- Esto es un modal -->
+<!-- Este es el modal de guardar la cuenta -->
+<div class="mensaje-de-guardar-cuenta">
+    <h2>Los cambios se han guardado de manera exitosa!</h2>
+    <button class="aceptar">Aceptar</button>
+</div>
+<!-- Esto es un modal de eliminar la cuenta-->
 <div class="modal">
     <div class="eliminar-cuenta">
         <img src="../imagenes/hw7/warning.svg" alt="Advertencia!">
@@ -64,6 +83,15 @@
     </div>
 
 </div>
+<!-- Modal de mensaje para guardar la cuenta -->
+    <script>
+        let abrir_mensaje = document.getElementsByClassName('aceptar')
+        let modal_mensaje = document.getElementsByClassName('mensaje-de-guardar-cuenta')
+
+        abrir_mensaje.addEventListener('click', () => {
+            modal_mensaje.classList.add('active')
+        })
+    </script>
     <!--Modal de eliminar cuenta en "MICUENTA" -->
     <script>
         // Llamamos las variables

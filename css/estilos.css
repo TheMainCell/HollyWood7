@@ -280,8 +280,8 @@ iframe {
 }
 .contenedor-datos-personales img {
     align-self: center;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -304,10 +304,11 @@ iframe {
     margin-bottom: 10px;
 }
 
-
-
 .nombre-de-usuario input, .correo-electronico input, .editar-usuario input, .editar-contrasena input {
+    
     border: 0;
+    font-size: 13pt;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -315,9 +316,63 @@ iframe {
     margin: 8px;
     height: 34px;
     width: 333px;
-    background-color: var(--fondo);
+    background-color: black;
     border-radius: 10px;
 }
+
+/* fieldset*/
+.fieldset {
+    border-radius: 6px;
+    width: 200px;
+    height: 90px;
+    margin: 5px;
+
+
+}
+.fieldset .legend {
+    /* background-color: var(--fondo); */
+    border-radius: 10px;
+    border: 0;
+    padding: 5px;
+}
+.mensaje-de-guardar-cuenta {
+    visibility: hidden;
+    position: absolute;
+    top: 60%;
+    left: 32%;
+    width: 333px;
+    background-color: rgba(0, 0, 0,1);
+    display: flex;
+    flex-direction: column;    
+}
+.mensaje-de-guardar-cuenta.active {
+    visibility: visible;
+    
+}
+.mensaje-de-guardar-cuenta h2 {
+    text-align: center;
+    width: 320px;
+}
+.mensaje-de-guardar-cuenta .aceptar {
+    padding: 10px 15px;
+    width: 100px;
+    align-self: center;
+    margin: 10px;
+    background-color: var(--fondo);
+    border: 0;
+    color: #FFF;
+    border-radius: 5px;
+    border: 1px solid red;
+
+}
+.mensaje-de-guardar-cuenta .aceptar:hover {
+    background-color: var(--hover);
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+
 .confirmar_cambios {
     display: none;
     padding: 10px;
