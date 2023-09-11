@@ -97,16 +97,13 @@
 }
 
 /* Contenedor donde se ubucan los dos div almacenados */
+.seccions-mobile {display: none;}
 .container {display: flex;}
 
 /* Donde estan todos los links */
 .sidebar-right {
     /* Recuerda que pusiste el none para poder vizualizar el sidebar-left */
-
-    /* ///////////////////////////////////////////////////// */
     display: flex;
-    /* ///////////////////////////////////////////////////// */
-
     flex-wrap: wrap;
     flex-direction: column;
     width: 400px;
@@ -161,6 +158,7 @@
 }
 
 .header-para-navegar .bx {
+    cursor: pointer;
     width: 60px;
     height: 40px;
     font-size: 30px;
@@ -260,7 +258,8 @@ iframe {
     opacity: 1;
     display: flex;
     flex-direction: column;
-    transition: .3s
+    transition: .3s;
+
 }
 
 .contenedor-DP h1 {text-align: center;}
@@ -305,7 +304,7 @@ iframe {
 }
 
 .nombre-de-usuario input, .correo-electronico input, .editar-usuario input, .editar-contrasena input {
-    
+    outline: none;
     border: 0;
     font-size: 13pt;
     color: white;
@@ -318,6 +317,7 @@ iframe {
     width: 333px;
     background-color: black;
     border-radius: 10px;
+    
 }
 
 /* fieldset*/
@@ -335,6 +335,7 @@ iframe {
     border: 0;
     padding: 5px;
 }
+
 .mensaje-de-guardar-cuenta {
     visibility: hidden;
     position: absolute;
@@ -343,7 +344,8 @@ iframe {
     width: 333px;
     background-color: rgba(0, 0, 0,1);
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;  
+      
 }
 .mensaje-de-guardar-cuenta.active {
     visibility: visible;
@@ -565,7 +567,6 @@ p {margin: 7px;}
 
 /* /////////////////////////////salircuenta//////////////////////////////////// */
 .salir {
-    border: 1px solid red;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -594,8 +595,156 @@ p {margin: 7px;}
     transition: all .2s;
 }
 
-.boton_1:hover {background-color: rgb(28, 116, 216);}
-
-.boton_2:hover { background-color: red;}
+.boton_1:hover { background-color: red;}
 
 /* ///////////////////////////////Responsive//////////////////////////////////// */
+@media screen and (max-width: 430px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 932px;
+    }
+/* ///////////////////Apartado DISPLAY////////////////// */
+
+/* 
+Aqui esta configuracion es del display donde se reproduce todo el contenido de configuracion a traves de un iframe que inconpore
+*/
+    .display-config {
+        margin: 0;
+        width: 410px;
+        height: 892px;
+        /* border: 6px solid red; */
+    }
+   .sidebar-right {
+    position: sticky;
+    width: 400px;
+    height: 100px;
+    /* border: 1px solid rgb(0, 119, 255); */
+    display: flex;
+    flex-direction: column;
+   }
+
+
+/* Barra de navegacion */
+   .seccions-mobile {
+       /* border: 1px solid red; */
+    height: 30px;
+    align-self: center;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    }
+    .seccions-mobile i {
+        font-size: 22pt;
+        color: white;
+    }
+
+
+
+
+   .sidebar-right .perfil {
+    display: none;
+   }
+   .sidebar-right .separador {
+    display: none;
+   }
+   .sidebar-right nav {
+    display: none;
+
+   }
+  .sidebar-left {
+    width: 409px;
+    height: 799px;
+    /* border: 1px solid rgb(81, 255, 0); */
+    overflow: hidden;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar-left iframe {
+    width: 380px;
+    height: 700px;
+    /* border: 1px solid rgb(28, 3, 255); */
+
+  }
+  /* modal de eliminar cuenta */
+  .eliminar-cuenta {
+    right: 4%;
+    height: 300px;
+    width: 350px;
+  }
+  .cerrar {
+    background-color: rgb(0, 89, 255);
+  }
+  
+  /* ///////////////// Micuenta en responsive /////////////// */
+  .header-de-cuenta {
+      width: 300px;
+      /* border: 1px solid green; */
+      /* align-self: center; */
+      margin: 0 auto;
+    }
+    .header-de-cuenta h1 {
+        font-size: 18pt;
+        align-self: center;
+        margin: 5px;
+        
+    }
+    .body-datesPersonals {
+        width: 390px;
+        height: 100%; 
+    }
+    .contenedor-DP {
+        width: 350px;
+        height: 750px;
+        position: static;
+    }
+
+    .contenedor-datos-personales {
+        width: 360px;
+        height: 620px;
+    }
+/* //////////////contacto//////////////////////////// */
+    .contenedor-de-contacto {
+        border: 1px solid paleturquoise;
+        width: 360px;
+        height: 620px;
+
+    }
+    .ubicacion {
+        display: flex;
+        justify-content: center;
+    }
+    .ubicacion iframe {
+        width: 380px;
+        }
+/* /////////////////////Terminos y condiciones/////////////////// */
+
+    .contenido_ter_y_cond article {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido_ter_y_cond article, .contenido_ter_y_cond h2,.contenido_ter_y_cond p {border: 0;}
+
+    .contenido_ter_y_cond section {
+        width: 330px;
+    }
+    .contenido_ter_y_cond p {
+        font-size: 16pt;
+    }
+/* ///////////////////Ayuda////////////////////// */
+
+    .header-de-ayuda img {
+        height: 120px;
+    }
+    .main-de-ayuda {
+        width: 360px;
+    }
+
+    .main-de-ayuda p {
+        width: 353px;
+        font-size: 16pt;
+    }
+}
