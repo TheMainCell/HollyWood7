@@ -20,47 +20,38 @@
         <!-- Estas son las cajas -->
 
         <div class="contenedor-datos-personales">
-            <!-- Sacare solo lo que esta comentado -->
-            <figure>
-                <img src="../imagenes/hw7/imagen_agregar.png" alt="foto de perfil" id="img">
-                <figcaption>
-                    <input type="file" id="foto" name="foto" class="escribir_datos">Cambiar foto de perfil
-                </figcaption>
-            </figure>
 <!-- Esto se hizo de esta manera sin el label porque a partir de la base de datos es que nosotros vamos rellenar con informacion verdadera y con datos del usuario que este dentro de la BD, por lo tanto tendran un placeholder por ahora pero esto obviamente esta sujeto a cambios asi que si se encuentran alguna inconsistencia con esto o algun problema, favor de hablar con Cristian para que se aclaren todas esas dudas -->
             
             <div class="nombre-de-usuario">
-                <fieldset class="fieldset">
+                <fieldset class="fieldset" id="fieldset">
                     <legend class="legend">Nombre</legend>
-                    <input type="text" class="escribir_datos">
+                    <input type="text" class="escribir_datos" id="nombre" value="José Josefinito" autocomplete="off">
 
                 </fieldset>
             </div>
-            
             <div class="correo-electronico">
-                <fieldset class="fieldset">
-                    <legend class="legend">Correo electronico</legend>
-                <input type="email" class="escribir_datos">
+                <fieldset class="fieldset" id="fieldset">
+                    <legend class="legend">Correo electronico | (No se puede modificar)</legend>
+                <input type="email" disabled class="escribir_datos" id="correo" value="josefinito777@gmail.com" autocomplete="off">
                 </fieldset>
             </div>
 
             <div class="editar-usuario">
-                <fieldset class="fieldset">
+                <fieldset class="fieldset" id="fieldset">
                     <legend class="legend">Usuario</legend>
-                    <input type="text" class="escribir_datos">
+                    <input type="text" class="escribir_datos" id="usuario" value="josefinito777" autocomplete="off">
                 </fieldset>
             </div>
 
             <div class="editar-contrasena">
-                <fieldset class="fieldset">
+                <fieldset class="fieldset fieldset-contrasena" id="fieldset">
                     <legend class="legend">Constraseña</legend>
-                <input type="password" class="escribir_datos">
+                <input type="password" class="escribir_datos" value="admin" id="password" autocomplete="off">
+                    <input type="checkbox" id="check" class="password" onchange="verPassword()">
                 </fieldset>
             </div>
-            <div class="confirmar_cambios">
-                <button>Guardar cambios</button>
-            </div>
-
+            <!-- Este se encuentra dentro del input principal -->
+                <input type="button" class="confirmar_cambios" onclick="valida()" value="Guardar cambios">
         </div>
 
             <button id="boton-delete" class="a-eliminar">Eliminar cuenta</button>
@@ -70,7 +61,7 @@
 <!-- Este es el modal de guardar la cuenta -->
 <div class="mensaje-de-guardar-cuenta">
     <h2>Los cambios se han guardado de manera exitosa!</h2>
-    <button class="aceptar">Aceptar</button>
+    <button id="aceptar" class="aceptar">Aceptar</button>
 </div>
 <!-- Esto es un modal de eliminar la cuenta-->
 <div class="modal">
@@ -78,52 +69,33 @@
         <img src="../imagenes/hw7/warning.svg" alt="Advertencia!">
         <h3>Eliminar cuenta de manera permanente</h3>
         <p>Al eliminar esta cuenta todas tus compras y datos personales se eliminarán de forma permanente.</p>
-        <a href="" class="cerrar">Cancelar</a>
-        <a href="../index.html" target="_parent" >Eliminar</a>
+        <a href="" class="cerrar2">Cancelar</a>
+        <a href="" class="eliminarDef">Eliminar</a>
     </div>
 
 </div>
-<!-- Modal de mensaje para guardar la cuenta -->
-    <script>
-        let abrir_mensaje = document.getElementsByClassName('aceptar')
-        let modal_mensaje = document.getElementsByClassName('mensaje-de-guardar-cuenta')
-
-        abrir_mensaje.addEventListener('click', () => {
-            modal_mensaje.classList.add('active')
-        })
-    </script>
-    <!--Modal de eliminar cuenta en "MICUENTA" -->
-    <script>
-        // Llamamos las variables
-        let abrir = document.getElementsByClassName('a-eliminar')[0];
-        let cerrar = document.getElementsByClassName('cerrar')[0];
-        let aparece = document.getElementsByClassName('contenedor-DP')[0];
-        // para que aparezca
-        let modal = document.getElementsByClassName('eliminar-cuenta')[0];
-        
-        //Vamos al mambo
-        abrir.addEventListener('click', e => {
-           aparece.style.opacity = "0.37";
-           modal.style.display = "block";
-        });
-        cerrar.addEventListener('click', e => {
-            aparece.style.opacity = "1";
-            modal.style.display = "none";
-
-        });
 
 
-    </script>
-    <script src="../js/script.js"></script>
-    <script>
-        let abre = Array.from(document.getElementsByClassName('escribir_datos'));
-        let edita = document.getElementsByClassName('confirmar_cambios')[0];
 
-        abre.map(abra => {
-            abra.addEventListener('click', () => {
-            edita.classList.add('active')
-        })})
+<!-- Modal de confirmar eliminacion de cuenta -->
+<div class="confirmDelete">
+    <h1>Eliminar cuenta de HW7</h1>
+    <p>Para confirmar la eliminacion de la cuenta escriba "AmoHollywoodSiete"</p>
+    <form action="">
+        <input type="text" id="confirmar" placeholder="Escribe">
+    </form>
+    <div class="botones-eliminar">
+        <input type="button" class="cerrar"  value="Cancelar">
+        <input type="button" class="eliminar" target="_black" value="Confirmar">
+    </div>
+</div>
 
-    </script>
+<!-- Estos son los enlaces de los scripts que llevo hecho -->
+<script src="../js/funcionesBasicas/eliminarCuenta.js"></script>
+<script src="../js/funcionesBasicas/guardarCuenta.js"></script>
+<script src="../js/funcionesBasicas/mostrarBotonSAVE.js">
+</script>
+<script src="../js/funcionesBasicas/mostrarPass.js"></script>
+<script src="../js/funcionesBasicas/validacionInputs.js"></script>
 </body>
 </html>

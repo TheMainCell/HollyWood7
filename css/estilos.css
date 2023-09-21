@@ -326,16 +326,29 @@ iframe {
     width: 200px;
     height: 90px;
     margin: 5px;
-
-
 }
+
 .fieldset .legend {
-    /* background-color: var(--fondo); */
+    font-weight: 500;
+    color: rgb(158, 208, 203);
     border-radius: 10px;
     border: 0;
     padding: 5px;
 }
 
+
+.fieldset-contrasena {
+    display: flex;
+    position: relative;
+}
+
+.fieldset-contrasena .password {
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+    width: 30px;
+}
+/* Hola Cristian del futuro, no cambies el visibility porque te puede buguear el trbajo como ya paso hace unos dias */
 .mensaje-de-guardar-cuenta {
     visibility: hidden;
     position: absolute;
@@ -347,14 +360,12 @@ iframe {
     flex-direction: column;  
       
 }
-.mensaje-de-guardar-cuenta.active {
-    visibility: visible;
-    
-}
+
 .mensaje-de-guardar-cuenta h2 {
     text-align: center;
     width: 320px;
 }
+
 .mensaje-de-guardar-cuenta .aceptar {
     padding: 10px 15px;
     width: 100px;
@@ -364,23 +375,20 @@ iframe {
     border: 0;
     color: #FFF;
     border-radius: 5px;
-    border: 1px solid red;
-
 }
+
 .mensaje-de-guardar-cuenta .aceptar:hover {
     background-color: var(--hover);
     display: flex;
-    /* align-items: center; */
     justify-content: center;
 }
 
 
-.confirmar_cambios {
+
+.confirmar_cambios{
     display: none;
-    padding: 10px;
-    border-bottom: 1px solid;
-}
-.confirmar_cambios button {
+    margin-top: 20px;
+    width: 150px;
     cursor: pointer;
     padding: 10px;
     border: 0;
@@ -390,25 +398,16 @@ iframe {
     transition: .3s;
     margin-bottom: 7px;
 }
-.confirmar_cambios button:hover {
+.confirmar_cambios:hover {
     background-color: var(--hover);
 }
 .confirmar_cambios.active {
     display: block;
     transition: all .3s;
-    
-
 }
 
 
-
-
-
-
 /* Cuenta de usuario */
-
-
-
 
 
 #boton-delete {
@@ -460,8 +459,8 @@ iframe {
     margin: 10px;
 }
 
-/* No sabía que funcionaría */
-.eliminar-cuenta [target="_parent"]:hover {
+/* Ojo */
+.botones-eliminar .eliminar:hover,.eliminar-cuenta .eliminarDef:hover {
     background-color: red;
 }
 
@@ -472,9 +471,59 @@ iframe {
     border-radius: 5px;
 }
 
-/* Boton para cerrar cuenta rojo */
+/* Estilos de ventana de confirmar el delete de la cuenta de usuario */
 
-.cerrar:hover { background-color: rgb(0, 119, 255);}
+.confirmDelete {
+    display: none;
+    border: 1px solid rgb(0, 255, 76);
+    background-color: #0f1218;
+    width: 350px;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+}
+/* Para cerrar el modal por si acaso el usuario se arrepiente de la eliminacion de la cuenta */
+
+.confirmDelete h1 {
+    text-align: center;
+}
+.confirmDelete form {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.confirmDelete #confirmar {
+    color: white;
+    outline: none;
+    width: 200px;
+    border: 0;
+    background-color: #0f1218;
+    border-bottom: 1px solid #FFF;
+}
+
+.botones-eliminar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botones-eliminar input {
+    background-color: #000000;
+    border: 0;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 8px;
+    width: 150px;
+    padding: 5px 5px;
+
+
+}
+
+/* Boton para cerrar cuenta */
+
+.cerrar:hover, .cerrar2:hover { background-color: rgb(0, 119, 255);}
 
 
 
@@ -537,8 +586,7 @@ iframe {
 
 .llamar:hover { background-color: var(--hover);}
 
-.contenedor-de-contacto h2,
-p {margin: 7px;}
+.contenedor-de-contacto h2, p {margin: 7px;}
 
 .ubicacion {
     height: 600px;
@@ -614,13 +662,11 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
         margin: 0;
         width: 410px;
         height: 892px;
-        /* border: 6px solid red; */
     }
    .sidebar-right {
     position: sticky;
     width: 400px;
     height: 100px;
-    /* border: 1px solid rgb(0, 119, 255); */
     display: flex;
     flex-direction: column;
    }
@@ -628,7 +674,6 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
 
 /* Barra de navegacion */
    .seccions-mobile {
-       /* border: 1px solid red; */
     height: 30px;
     align-self: center;
     width: 250px;
@@ -656,7 +701,6 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
   .sidebar-left {
     width: 409px;
     height: 799px;
-    /* border: 1px solid rgb(81, 255, 0); */
     overflow: hidden;
     padding-right: 0px;
     display: flex;
@@ -666,7 +710,6 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
   .sidebar-left iframe {
     width: 380px;
     height: 700px;
-    /* border: 1px solid rgb(28, 3, 255); */
 
   }
   /* modal de eliminar cuenta */
@@ -682,8 +725,6 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
   /* ///////////////// Micuenta en responsive /////////////// */
   .header-de-cuenta {
       width: 300px;
-      /* border: 1px solid green; */
-      /* align-self: center; */
       margin: 0 auto;
     }
     .header-de-cuenta h1 {
@@ -706,6 +747,11 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
         width: 360px;
         height: 620px;
     }
+    .fieldset-contrasena .password {
+    position: absolute;
+    right: 5%;
+    width: 30px;
+}
 /* //////////////contacto//////////////////////////// */
     .contenedor-de-contacto {
         border: 1px solid paleturquoise;
