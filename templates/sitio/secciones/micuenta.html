@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos Personales</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/estilos.css')}}">
     <link rel="icon" href="../imagenes/favicon.jpg">
 </head>
 <body class="cuerpo-oscuro body-datesPersonals">
@@ -20,57 +20,54 @@
         <!-- Estas son las cajas -->
 
         <div class="contenedor-datos-personales">
-<!-- Esto se hizo de esta manera sin el label porque a partir de la base de datos es que nosotros vamos rellenar con informacion verdadera y con datos del usuario que este dentro de la BD, por lo tanto tendran un placeholder por ahora pero esto obviamente esta sujeto a cambios asi que si se encuentran alguna inconsistencia con esto o algun problema, favor de hablar con Cristian para que se aclaren todas esas dudas -->
-            
+            <form action="/editarUsuario/{{user[0]}}" method="post">
             <div class="nombre-de-usuario">
                 <fieldset class="fieldset" id="fieldset">
-                    <legend class="legend">Nombre</legend>
-                    <input type="text" class="escribir_datos" id="nombre" value="José Josefinito" autocomplete="off">
-
+                    <legend class="legend" name="nombre">Nombre</legend>
+                    <input type="text" class="escribir_datos" id="nombre" value="{{user[1]}}" autocomplete="off">
                 </fieldset>
             </div>
             <div class="correo-electronico">
                 <fieldset class="fieldset" id="fieldset">
-                    <legend class="legend">Correo electronico | (No se puede modificar)</legend>
-                <input type="email" disabled class="escribir_datos" id="correo" value="josefinito777@gmail.com" autocomplete="off">
+                    <legend class="legend">Apellido</legend>
+                <input type="text" name="apellido" class="escribir_datos" id="correo" value="{{user[2]}}" autocomplete="off">
                 </fieldset>
             </div>
 
             <div class="editar-usuario">
                 <fieldset class="fieldset" id="fieldset">
                     <legend class="legend">Usuario</legend>
-                    <input type="text" class="escribir_datos" id="usuario" value="josefinito777" autocomplete="off">
+                    <input type="text" class="escribir_datos" id="usuario" name="usuario" value="{{user[4]}}" autocomplete="off">
                 </fieldset>
             </div>
 
             <div class="editar-contrasena">
                 <fieldset class="fieldset fieldset-contrasena" id="fieldset">
                     <legend class="legend">Constraseña</legend>
-                <input type="password" class="escribir_datos" value="admin" id="password" autocomplete="off">
-                    <input type="checkbox" id="check" class="password" onchange="verPassword()">
+                <input type="password" class="escribir_datos" name="passUsuario" value="{{user[5]}}" id="password" autocomplete="off">
+                    <img src="../../../static/imagenes/hw7/visibility_on.svg" alt="foto de ojo password" id="imagen" class="imagen">
                 </fieldset>
             </div>
             <!-- Este se encuentra dentro del input principal -->
-                <input type="button" class="confirmar_cambios" onclick="valida()" value="Guardar cambios">
+                <input type="submit" class="confirmar_cambios" onclick="valida()" value="Guardar cambios">
+            </form>
+            <button id="boton-delete" class="a-eliminar">Eliminar cuenta</button>
+        
         </div>
 
-            <button id="boton-delete" class="a-eliminar">Eliminar cuenta</button>
 
 
     </main>
-<!-- Este es el modal de guardar la cuenta -->
-<div class="mensaje-de-guardar-cuenta">
-    <h2>Los cambios se han guardado de manera exitosa!</h2>
-    <button id="aceptar" class="aceptar">Aceptar</button>
-</div>
+
+    
 <!-- Esto es un modal de eliminar la cuenta-->
 <div class="modal">
     <div class="eliminar-cuenta">
-        <img src="../imagenes/hw7/warning.svg" alt="Advertencia!">
+        <img src="../../../static/imagenes/hw7/warning.svg" alt="Advertencia!">
         <h3>Eliminar cuenta de manera permanente</h3>
         <p>Al eliminar esta cuenta todas tus compras y datos personales se eliminarán de forma permanente.</p>
         <a href="" class="cerrar2">Cancelar</a>
-        <a href="" class="eliminarDef">Eliminar</a>
+        <a href="/eliminarCuenta/{{user[0]}}" class="eliminarDef">Eliminar</a>
     </div>
 
 </div>
@@ -91,11 +88,12 @@
 </div>
 
 <!-- Estos son los enlaces de los scripts que llevo hecho -->
-<script src="../js/funcionesBasicas/eliminarCuenta.js"></script>
-<script src="../js/funcionesBasicas/guardarCuenta.js"></script>
-<script src="../js/funcionesBasicas/mostrarBotonSAVE.js">
-</script>
-<script src="../js/funcionesBasicas/mostrarPass.js"></script>
-<script src="../js/funcionesBasicas/validacionInputs.js"></script>
+<script src="{{url_for('static', filename='js/funcionesBasicas/eliminarCuenta.js')}}"></script>
+<script src="{{url_for('static', filename='js/funcionesBasicas/guardarCuenta.js')}}"></script>
+<script src="{{url_for('static', filename='js/funcionesBasicas/mostrarBotonSAVE.js')}}"></script>
+<script src="{{url_for('static', filename='js/funcionesBasicas/mostrarPass.js')}}"></script>
+<script src="{{url_for('static', filename='js/funcionesBasicas/validacionInputs.js')}}"></script>
+
+
 </body>
 </html>

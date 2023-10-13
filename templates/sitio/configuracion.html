@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Configuración</title>
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/estilos.css')}}">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" href="imagenes/favicon.jpg">
+        <link rel="icon" href="../../static/imagenes/hw7/logo.png">
     </head>
 <!-- Una clase a cada uno de los body para poder darles el mismo estilo -->
     <body class="cuerpo-oscuro display-config"> 
@@ -21,11 +21,11 @@
                     </div> 
                         <!-- Lo que hare aqui sera agregar los datos para previsualizar el perfil -->
                         <div class="perfil">
-                            <img src="imagenes/hw7/foto-perfil-predeterminada.png" alt="">
-                            <!-- Con este <a> puedes darle las dimenciones que quieras, no hace falta ponerle clase porque puedes acceder a ella a traves de su padre -->
-                            <a href="secciones/micuenta.html" target="pantalla" class="current1"><span name="nombre">Jose Josefinito</span><span name="usuario">Usuario005</span></a>
+                            <a href="/micuenta" target="pantalla" class="current1"><span name="nombre">{{user[1]}}</span><span name="usuario">{{user[4]}}</span></a>
                         </div>
+
                         <!-- Esta es una linea que separa el header del  -->
+
                         <div class="separador"><hr></div>
                         
                         
@@ -33,26 +33,36 @@
                         
                         <!-- Este nav es para el escritorio -->
                     <nav>
-                        <a href="secciones/contacto.html" target="pantalla"><i class='bx bxs-contact' style='color:#fbfafa'></i>Contacto</a>
-                        <a href="secciones/ter_y_cond.html" target="pantalla"> <i class='bx bx-info-circle'></i> Terminos y Condiciones</a>
-                        <a href="secciones/ayuda.html" target="pantalla" class="current 4"> <i class='bx bx-help-circle'></i> Ayuda</a> 
-                        <a href="secciones/salircuenta.html" target="pantalla" class="current 5"> <i class='bx bx-log-out'></i> Salir de la cuenta</a>
+
+                        <a href="/contacto" target="pantalla"><i class='bx bxs-contact' 
+                        style='color:#fbfafa'></i>Contacto</a>
+                        
+                        <a href="/terminosYcondiciones" target="pantalla"> <i class='bx bx-info-circle'></i> Terminos y Condiciones</a>
+                        
+                        <a href="/ayuda" target="pantalla" class="current 4"> <i class='bx bx-help-circle'></i> Ayuda</a> 
+                        
+                        <a href="/salirCuenta" target="pantalla" class="current 5"> <i class='bx bx-log-out'></i> Salir de la cuenta</a>
                     </nav>
 
                     <!-- Contenedor de iconos de modo telefono -->
                     <div class="seccions-mobile">
-                            <a href="./secciones/micuenta.html" target="pantalla"><i class='bx bx-user'></i></a>
-                            <a href="./secciones/contacto.html" target="pantalla"><i class='bx bxs-contact'></i></a>
-                            <a href="./secciones/ter_y_cond.html" target="pantalla"><i class='bx bx-info-circle'></i></a>
-                            <a href="./secciones/ayuda.html" target="pantalla"><i class='bx bx-help-circle'></i></a>
-                            <a href="./secciones/salircuenta.html" target="pantalla"><i class='bx bx-log-out'></i></a>
+                            <a href="/micuenta" target="pantalla"><i class='bx bx-user'></i></a>
+
+                            <a href="/contacto" target="pantalla"><i class='bx bxs-contact'></i></a>
+
+                            <a href="/terminosYcondiciones" target="pantalla"><i class='bx bx-info-circle'></i></a>
+
+                            <a href="/ayuda" target="pantalla"><i class='bx bx-help-circle'></i></a>
+
+                            <a href="/salirCuenta" target="pantalla"><i class='bx bx-log-out'></i></a>
                         </div>
                 </div>
 
                 <!-- Este es el div de la parte izquierda en el cual estare viendo cada una de las opciones -->
+
                 <div class="sidebar-left">
 
-                    <iframe src="secciones/micuenta.html" name="pantalla" frameborder="0"></iframe>
+                    <iframe src="/micuenta" name="pantalla" frameborder="0">hola</iframe>
                 </div> 
         </div>
         <script src="js/script.js"></script>

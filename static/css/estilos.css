@@ -169,7 +169,7 @@
 /* Mi perfil para previzualizar */
 .perfil {
     height: 70px;
-    width: 340px;
+    width: 280px;
     cursor: pointer;
     margin: 15px auto;
     display: flex;
@@ -196,9 +196,12 @@
 }
 
 .perfil>a {
+    font-size: 12pt;
     position: relative;
     bottom: 0%;
-    right: 20%;
+    width: 200px;
+    height: 60px;
+    right: 0%;
     margin: 16px 0px 0 10px;
     flex-wrap: wrap;
     place-content: center;
@@ -342,50 +345,21 @@ iframe {
     position: relative;
 }
 
-.fieldset-contrasena .password {
+
+
+.fieldset-contrasena .imagen {
+    height: 35px;
     cursor: pointer;
     position: absolute;
     right: 10%;
-    width: 30px;
-}
-/* Hola Cristian del futuro, no cambies el visibility porque te puede buguear el trbajo como ya paso hace unos dias */
-.mensaje-de-guardar-cuenta {
-    visibility: hidden;
-    position: absolute;
-    top: 60%;
-    left: 32%;
-    width: 333px;
-    background-color: rgba(0, 0, 0,1);
-    display: flex;
-    flex-direction: column;  
-      
-}
+    bottom: 12px;
+    width: 35px;
+    transform: all .2s;
 
-.mensaje-de-guardar-cuenta h2 {
-    text-align: center;
-    width: 320px;
 }
-
-.mensaje-de-guardar-cuenta .aceptar {
-    padding: 10px 15px;
-    width: 100px;
-    align-self: center;
-    margin: 10px;
-    background-color: var(--fondo);
-    border: 0;
-    color: #FFF;
-    border-radius: 5px;
-}
-
-.mensaje-de-guardar-cuenta .aceptar:hover {
-    background-color: var(--hover);
-    display: flex;
-    justify-content: center;
-}
-
-
 
 .confirmar_cambios{
+    margin: 0 auto;
     display: none;
     margin-top: 20px;
     width: 150px;
@@ -395,7 +369,7 @@ iframe {
     border-radius: 5px;
     background-color: var(--fondo);
     color: cadetblue;
-    transition: .3s;
+    transition: all .3s;
     margin-bottom: 7px;
 }
 .confirmar_cambios:hover {
@@ -441,6 +415,8 @@ iframe {
     background-color: var(--fondo);
     text-align: center;
     padding: 20px;
+    transition: all .2s;
+
 }
 
 .eliminar-cuenta h3 {margin: 5px;}
@@ -646,6 +622,9 @@ iframe {
 .boton_1:hover { background-color: red;}
 
 /* ///////////////////////////////Responsive//////////////////////////////////// */
+
+
+/* Mobile */
 @media screen and (max-width: 430px) {
     .container {
         display: flex;
@@ -685,9 +664,6 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
         color: white;
     }
 
-
-
-
    .sidebar-right .perfil {
     display: none;
    }
@@ -701,7 +677,7 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
   .sidebar-left {
     width: 409px;
     height: 799px;
-    overflow: hidden;
+    overflow-y: scroll;
     padding-right: 0px;
     display: flex;
     justify-content: center;
@@ -712,15 +688,7 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
     height: 700px;
 
   }
-  /* modal de eliminar cuenta */
-  .eliminar-cuenta {
-    right: 4%;
-    height: 300px;
-    width: 350px;
-  }
-  .cerrar {
-    background-color: rgb(0, 89, 255);
-  }
+  
   
   /* ///////////////// Micuenta en responsive /////////////// */
   .header-de-cuenta {
@@ -734,30 +702,45 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
         
     }
     .body-datesPersonals {
-        width: 390px;
+        width: 350px;
         height: 100%; 
     }
     .contenedor-DP {
-        width: 350px;
-        height: 750px;
+        width: 300px;
+        height: 500px;
         position: static;
     }
 
     .contenedor-datos-personales {
         width: 360px;
-        height: 620px;
+        /* height: 620px; */
     }
     .fieldset-contrasena .password {
     position: absolute;
     right: 5%;
     width: 30px;
 }
+/* modal de eliminar cuenta */
+  .eliminar-cuenta {
+    right: 4%;
+    height: 300px;
+    width: 350px;
+  }
+  .cerrar {
+    background-color: rgb(0, 89, 255);
+  }
+
 /* //////////////contacto//////////////////////////// */
     .contenedor-de-contacto {
         border: 1px solid paleturquoise;
-        width: 360px;
+        width: 350px;
         height: 620px;
 
+    }
+    .contenido-de-contacto .llamar{
+        width: 376px;
+        margin: 0;
+        padding: 0;
     }
     .ubicacion {
         display: flex;
@@ -794,3 +777,38 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
         font-size: 16pt;
     }
 }
+
+
+@media screen and (max-width: 800px) {
+   /* Contacto */
+
+   /* Estilos similares entre terminos y condiciones, contacto y los estilos de ayuda */
+    .contenedor-de-contacto, .conteneder-de-termYCond,.ayuda-principal_content {
+        width: 360px;
+        height: 600px;
+
+    }
+    .contenedor-de-contacto .ubicacion {
+        width: 360px;
+        height: 400px;
+    }
+
+    /* Terminos y condiciones */
+    .contenido_ter_y_cond article {
+        height: 500px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido_ter_y_cond section {
+        width: 360px;
+    }
+
+    /* Ayuda */
+     .main-de-ayuda p {
+        width: 360px;
+        text-align: justify;
+     }
+
+}
+
