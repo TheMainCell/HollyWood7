@@ -34,7 +34,7 @@ def configuracion():
 
     print(user)
 
-    return render_template('sitio/configuracion.html',user=user[0])
+    return render_template('sitio/configuracion.html',user=user)
 
 
 # ///////////////////////////////////////////////Mi cuenta/////////
@@ -63,8 +63,9 @@ def editarUsuario(id):
 def eliminarCuenta(id):
     conexion=mysql.connect()
     cur=conexion.cursor()
-    cur.execute("DELETE FROM `clientes` WHERE id_cliente = %s",(id))
-    cursor=cur.commit()
+    cur.execute("DELETE FROM clientes WHERE id_cliente = %s",(id))
+    cur.fetchall()
+    cur.commit()
 
     return redirect('/')
 

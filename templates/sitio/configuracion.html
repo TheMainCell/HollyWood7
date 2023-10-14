@@ -20,51 +20,34 @@
                         <h1>Configuración</h1>
                     </div> 
                         <!-- Lo que hare aqui sera agregar los datos para previsualizar el perfil -->
-                        <div class="perfil">
-                            <a href="/micuenta" target="pantalla" class="current1"><span name="nombre">{{user[1]}}</span><span name="usuario">{{user[4]}}</span></a>
-                        </div>
-
-                        <!-- Esta es una linea que separa el header del  -->
-
-                        <div class="separador"><hr></div>
-                        
-                        
-                        
-                        
+                    <div class="perfil">
+                        <a href="/micuenta" target="pantalla" class="current1"><span name="nombre">{{user[0][1]}}</span><span name="usuario">{{user[0][4]}}</span></a>
+                    </div>
+                    <!-- Esta es una linea que separa el header del  -->
+                    <div class="separador"><hr></div>
                         <!-- Este nav es para el escritorio -->
                     <nav>
-
                         <a href="/contacto" target="pantalla"><i class='bx bxs-contact' 
                         style='color:#fbfafa'></i>Contacto</a>
-                        
                         <a href="/terminosYcondiciones" target="pantalla"> <i class='bx bx-info-circle'></i> Terminos y Condiciones</a>
-                        
                         <a href="/ayuda" target="pantalla" class="current 4"> <i class='bx bx-help-circle'></i> Ayuda</a> 
-                        
                         <a href="/salirCuenta" target="pantalla" class="current 5"> <i class='bx bx-log-out'></i> Salir de la cuenta</a>
                     </nav>
 
                     <!-- Contenedor de iconos de modo telefono -->
                     <div class="seccions-mobile">
-                            <a href="/micuenta" target="pantalla"><i class='bx bx-user'></i></a>
-
-                            <a href="/contacto" target="pantalla"><i class='bx bxs-contact'></i></a>
-
-                            <a href="/terminosYcondiciones" target="pantalla"><i class='bx bx-info-circle'></i></a>
-
-                            <a href="/ayuda" target="pantalla"><i class='bx bx-help-circle'></i></a>
-
-                            <a href="/salirCuenta" target="pantalla"><i class='bx bx-log-out'></i></a>
-                        </div>
+                        <a href="/micuenta" target="pantalla"><i class='bx bx-user'></i></a>
+                        <a href="/contacto" target="pantalla"><i class='bx bxs-contact'></i></a>
+                        <a href="/terminosYcondiciones" target="pantalla"><i class='bx bx-info-circle'></i></a>
+                        <a href="/ayuda" target="pantalla"><i class='bx bx-help-circle'></i></a>
+                        <a href="/salirCuenta" target="pantalla"><i class='bx bx-log-out'></i></a>
+                    </div>
                 </div>
 
                 <!-- Este es el div de la parte izquierda en el cual estare viendo cada una de las opciones -->
-
                 <div class="sidebar-left">
-
                     <iframe src="/micuenta" name="pantalla" frameborder="0">hola</iframe>
                 </div> 
         </div>
-        <script src="js/script.js"></script>
     </body>
 </html>

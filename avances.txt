@@ -1,0 +1,3 @@
+- He agragado un mensaje en la parte superior para que el usuario sepa que hacer para empezar a editar y sepa cuando este en el modo edicion y agregue un boton en la parte inferior para cancelar cuando se este haciendo una edicion. 
+
+- Agregué un metodo para que cuando el usuario vaya a eliminar su cuenta tenga que escribir una palabra clave a la hora de eliminar la cuenta, si esta es verdadera entonces se procedera a eliminar su usuario directamente desde la base de datos

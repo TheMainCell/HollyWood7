@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datos Personales</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{url_for('static',filename='css/estilos.css')}}">
     <link rel="icon" href="../imagenes/favicon.jpg">
@@ -14,7 +13,10 @@
         <!-- <img src="../imagenes/hw7/logo.png" alt="logo">  -->
         <h1>Datos Personales</h1>
     </header> 
-
+    <!-- Mensaje para el usuario (sujeto a cambios)-->
+    <div class="mensajeDatos">
+        <p class="mensajeUser">Haz clic en cualquiera de los campos para empezar a editar</p>
+    </div>
 
     <main class="contenedor-DP">
         <!-- Estas son las cajas -->
@@ -52,11 +54,8 @@
                 <input type="submit" class="confirmar_cambios" onclick="valida()" value="Guardar cambios">
             </form>
             <button id="boton-delete" class="a-eliminar">Eliminar cuenta</button>
-        
+            <button id="boton-cancelar" class="cancelarEdicion">Cancelar</button>
         </div>
-
-
-
     </main>
 
     
@@ -66,33 +65,20 @@
         <img src="../../../static/imagenes/hw7/warning.svg" alt="Advertencia!">
         <h3>Eliminar cuenta de manera permanente</h3>
         <p>Al eliminar esta cuenta todas tus compras y datos personales se eliminarán de forma permanente.</p>
+        <p>Escriba "ILoveHollywood7" para eliminar:</p>
+        <input type="text" class="confirmarBorrado"  placeholder="Escriba"> <br><br>
         <a href="" class="cerrar2">Cancelar</a>
-        <a href="/eliminarCuenta/{{user[0]}}" class="eliminarDef">Eliminar</a>
-    </div>
-
-</div>
-
-
-
-<!-- Modal de confirmar eliminacion de cuenta -->
-<div class="confirmDelete">
-    <h1>Eliminar cuenta de HW7</h1>
-    <p>Para confirmar la eliminacion de la cuenta escriba "AmoHollywoodSiete"</p>
-    <form action="">
-        <input type="text" id="confirmar" placeholder="Escribe">
-    </form>
-    <div class="botones-eliminar">
-        <input type="button" class="cerrar"  value="Cancelar">
-        <input type="button" class="eliminar" target="_black" value="Confirmar">
+        <a href=" /eliminarCuenta/{{user[0]}}" class="eliminarDef">Eliminar</a>
     </div>
 </div>
 
 <!-- Estos son los enlaces de los scripts que llevo hecho -->
-<script src="{{url_for('static', filename='js/funcionesBasicas/eliminarCuenta.js')}}"></script>
-<script src="{{url_for('static', filename='js/funcionesBasicas/guardarCuenta.js')}}"></script>
-<script src="{{url_for('static', filename='js/funcionesBasicas/mostrarBotonSAVE.js')}}"></script>
-<script src="{{url_for('static', filename='js/funcionesBasicas/mostrarPass.js')}}"></script>
-<script src="{{url_for('static', filename='js/funcionesBasicas/validacionInputs.js')}}"></script>
+<script src="{{url_for('static', filename='js/modulos_micuenta/eliminarCuenta.js')}}"></script>
+<!-- <script src="{{url_for('static', filename='js/modulos_micuenta/guardarCuenta.js')}}"></script> -->
+<script src="{{url_for('static', filename='js/modulos_micuenta/mostrarBotonSAVE.js')}}"></script>
+<script src="{{url_for('static', filename='js/modulos_micuenta/mostrarPass.js')}}"></script>
+<script src="{{url_for('static', filename='js/modulos_micuenta/validacionInputs.js')}}"></script>
+<script src="{{url_for('static', filename='js/modulos_micuenta/borrar.js')}}"></script>
 
 
 </body>

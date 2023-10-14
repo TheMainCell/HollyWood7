@@ -196,7 +196,6 @@
 }
 
 .perfil>a {
-    font-size: 12pt;
     position: relative;
     bottom: 0%;
     width: 200px;
@@ -396,8 +395,19 @@ iframe {
     cursor: pointer;
     transition: all .2s;
 }
-
-#boton-delete:hover {background-color: var(--hover);}
+#boton-cancelar {
+    border: 0;
+    margin: 10px auto;
+    display: none;
+    background-color: var(--fondo);
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(255, 0, 0);
+    font-size: 10pt;
+    cursor: pointer;
+    transition: all .2s;
+}
+#boton-delete:hover, #boton-cancelar {background-color: var(--hover);}
 
 .a-eliminar {text-decoration: none;}
 
@@ -410,7 +420,7 @@ iframe {
     right: 29%;
     top: 20%;
     width: 380px;
-    height: 250px;
+    height: 350px;
     border-radius: 5px;
     background-color: var(--fondo);
     text-align: center;
@@ -436,7 +446,7 @@ iframe {
 }
 
 /* Ojo */
-.botones-eliminar .eliminar:hover,.eliminar-cuenta .eliminarDef:hover {
+.eliminar:hover,.eliminar-cuenta .eliminarDef:hover {
     background-color: red;
 }
 
@@ -447,60 +457,18 @@ iframe {
     border-radius: 5px;
 }
 
-/* Estilos de ventana de confirmar el delete de la cuenta de usuario */
-
-.confirmDelete {
-    display: none;
-    border: 1px solid rgb(0, 255, 76);
-    background-color: #0f1218;
-    width: 350px;
-    position: absolute;
-    left: 30%;
-    top: 40%;
-}
-/* Para cerrar el modal por si acaso el usuario se arrepiente de la eliminacion de la cuenta */
-
-.confirmDelete h1 {
-    text-align: center;
-}
-.confirmDelete form {
-    display: flex;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
-}
-.confirmDelete #confirmar {
-    color: white;
-    outline: none;
-    width: 200px;
-    border: 0;
-    background-color: #0f1218;
-    border-bottom: 1px solid #FFF;
-}
-
-.botones-eliminar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.botones-eliminar input {
-    background-color: #000000;
-    border: 0;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 8px;
-    width: 150px;
-    padding: 5px 5px;
-
-
-}
-
 /* Boton para cerrar cuenta */
 
 .cerrar:hover, .cerrar2:hover { background-color: rgb(0, 119, 255);}
 
+.confirmarBorrado {
+    border: 0;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all .2s;
+
+}
 
 
 /* /////////////////////////////ter_y_cond//////////////////////////////////// */
@@ -713,7 +681,6 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
 
     .contenedor-datos-personales {
         width: 360px;
-        /* height: 620px; */
     }
     .fieldset-contrasena .password {
     position: absolute;
@@ -723,12 +690,13 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
 /* modal de eliminar cuenta */
   .eliminar-cuenta {
     right: 4%;
-    height: 300px;
+    height: 360px;
     width: 350px;
   }
   .cerrar {
     background-color: rgb(0, 89, 255);
   }
+
 
 /* //////////////contacto//////////////////////////// */
     .contenedor-de-contacto {
@@ -780,7 +748,7 @@ Aqui esta configuracion es del display donde se reproduce todo el contenido de c
 
 
 @media screen and (max-width: 800px) {
-   /* Contacto */
+   /* ^Contacto */
 
    /* Estilos similares entre terminos y condiciones, contacto y los estilos de ayuda */
     .contenedor-de-contacto, .conteneder-de-termYCond,.ayuda-principal_content {
