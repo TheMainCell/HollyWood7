@@ -10,51 +10,53 @@
 </head>
 <body class="cuerpo-oscuro body-datesPersonals">
     <header class="header-de-cuenta">
-        <!-- <img src="../imagenes/hw7/logo.png" alt="logo">  -->
         <h1>Datos Personales</h1>
     </header> 
     <!-- Mensaje para el usuario (sujeto a cambios)-->
     <div class="mensajeDatos">
         <p class="mensajeUser">Haz clic en cualquiera de los campos para empezar a editar</p>
+        {% if mensaje %}
+        <p>{{mensaje}}</p>
+        {%endif%}
     </div>
 
     <main class="contenedor-DP">
         <!-- Estas son las cajas -->
 
         <div class="contenedor-datos-personales">
-            <form action="/editarUsuario/{{user[0]}}" method="post">
-            <div class="nombre-de-usuario">
-                <fieldset class="fieldset" id="fieldset">
-                    <legend class="legend" name="nombre">Nombre</legend>
-                    <input type="text" class="escribir_datos" id="nombre" value="{{user[1]}}" autocomplete="off">
-                </fieldset>
-            </div>
-            <div class="correo-electronico">
-                <fieldset class="fieldset" id="fieldset">
-                    <legend class="legend">Apellido</legend>
-                <input type="text" name="apellido" class="escribir_datos" id="correo" value="{{user[2]}}" autocomplete="off">
-                </fieldset>
-            </div>
+            <form action="/configuracion/editarUsuario/{{user[0]}}" id="fomulario" method="POST">
+                <div class="nombre-de-usuario">
+                    <fieldset class="fieldset" id="fieldset">
+                        <legend class="legend">Nombre</legend>
+                        <input type="text" class="escribir_datos" id="nombre" name="nombre" value="{{user[1]}}" autocomplete="off" required onchange="alert('hola')">
+                    </fieldset>
+                </div>
+                <div class="correo-electronico">
+                    <fieldset class="fieldset" id="fieldset">
+                        <legend class="legend">Apellido</legend>
+                    <input type="text" name="apellido" class="escribir_datos" id="apellido" value="{{user[2]}}" autocomplete="off" required>
+                    </fieldset>
+                </div>
 
-            <div class="editar-usuario">
-                <fieldset class="fieldset" id="fieldset">
-                    <legend class="legend">Usuario</legend>
-                    <input type="text" class="escribir_datos" id="usuario" name="usuario" value="{{user[4]}}" autocomplete="off">
-                </fieldset>
-            </div>
+                <div class="editar-usuario">
+                    <fieldset class="fieldset" id="fieldset">
+                        <legend class="legend">Usuario</legend>
+                        <input type="text" class="escribir_datos" id="usuario" name="usuario" value="{{user[4]}}" autocomplete="off" required>
+                    </fieldset>
+                </div>
 
-            <div class="editar-contrasena">
-                <fieldset class="fieldset fieldset-contrasena" id="fieldset">
-                    <legend class="legend">Constraseña</legend>
-                <input type="password" class="escribir_datos" name="passUsuario" value="{{user[5]}}" id="password" autocomplete="off">
-                    <img src="../../../static/imagenes/hw7/visibility_on.svg" alt="foto de ojo password" id="imagen" class="imagen">
-                </fieldset>
-            </div>
-            <!-- Este se encuentra dentro del input principal -->
-                <input type="submit" class="confirmar_cambios" onclick="valida()" value="Guardar cambios">
+                <div class="editar-contrasena">
+                    <fieldset class="fieldset fieldset-contrasena" id="fieldset">
+                        <legend class="legend">Constraseña</legend>
+                    <input type="password" class="escribir_datos" name="passUsuario" value="{{user[5]}}" id="password" autocomplete="off" required>
+                        <img src="../../../static/imagenes/hw7/visibility_on.svg" alt="foto de ojo password" id="imagen" class="imagen">
+                    </fieldset>
+                </div>
+                <!-- Este se encuentra dentro del input principal -->
+                    <input type="submit" class="confirmar_cambios" onclick="valida()" value="Guardar cambios">
             </form>
             <button id="boton-delete" class="a-eliminar">Eliminar cuenta</button>
-            <button id="boton-cancelar" class="cancelarEdicion">Cancelar</button>
+            <a href="/configuracion/micuenta" id="boton-cancelar" class="cancelarEdicion">Cancelar</a>
         </div>
     </main>
 
@@ -68,7 +70,7 @@
         <p>Escriba "ILoveHollywood7" para eliminar:</p>
         <input type="text" class="confirmarBorrado"  placeholder="Escriba"> <br><br>
         <a href="" class="cerrar2">Cancelar</a>
-        <a href=" /eliminarCuenta/{{user[0]}}" class="eliminarDef">Eliminar</a>
+        <a href="/configuracion/eliminarCuenta/{{user[0]}}" class="eliminarDef">Eliminar</a>
     </div>
 </div>
 
@@ -77,8 +79,8 @@
 <!-- <script src="{{url_for('static', filename='js/modulos_micuenta/guardarCuenta.js')}}"></script> -->
 <script src="{{url_for('static', filename='js/modulos_micuenta/mostrarBotonSAVE.js')}}"></script>
 <script src="{{url_for('static', filename='js/modulos_micuenta/mostrarPass.js')}}"></script>
-<script src="{{url_for('static', filename='js/modulos_micuenta/validacionInputs.js')}}"></script>
 <script src="{{url_for('static', filename='js/modulos_micuenta/borrar.js')}}"></script>
+
 
 
 </body>
