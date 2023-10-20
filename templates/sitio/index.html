@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal | HW7</title>
+    <link rel="icon" href="../../static/imagenes/favicon-32x32.png">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="cuerpo-index">
+    <!-- Contenedor de toda la página -->
+    <div id="contenedor">
+        <!-- Logo -->
+        <header class="header-principal">
+                <div class="contenedor-menu">
+                    <!-- Menú -->
+                    <div class="navMenu">
+                        <a href="#index.html"><img src="../../static/imagenes/navegacion/arrow_back - copia.svg" class="back-principal desactivado"></a>
+                        <a href="#index.html"><img src="../../static/imagenes/navegacion/home.svg" alt="" class="casita-principal actual"></a>
+                        <a href="/sitio/inicioSesion"><img src="../../static/imagenes/navegacion/login.svg" alt="" class="login-principal"></a>
+                        <div class="categorias">
+                            <div class="contenedor-btn_cat">
+                                <img src="../../static/imagenes/navegacion/categorias.svg" alt="" class="lista-principal">
+                            </div>
+                    
+                            <div class="categorias-content"> 
+                            <a href="/sitio/accion" class="link-categorias">Accion</a> 
+                            <a href="/sitio/animacion" class="link-categorias">Animacion</a> 
+                            <a href="/sitio/comedia" class="link-categorias">Comedia</a>
+                            <a href="/sitio/heroe" class="link-categorias">Heroes</a>
+                            </div>
+                        </div>
+
+                        <a href="/sitio/configuracion"><img src="../../static/imagenes/navegacion/settings.svg" alt="" class="configuracion-principal"></a>
+                    </div>
+                    <div class="imagen-logo">
+                        <img src="../../static/imagenes/logoFavicon/logo.png" alt="Logo" class="imagen-logo">
+                    </div>
+                </div>
+            <div class="botones-principal">
+                <a href="sitio/pelicula/h1"><button class="boton-principal">Ver Información</button></a>
+            </div>
+        </header>
+        <main>
+            <h2 class="subtitulo">Estrenos</h2>
+            <div class="estrenos">
+                <div class="pelicula uno wick">
+                    <a href="sitio/pelicula/a1"><img src="../../static/imagenes/caratulas/accion/jonh-wick-3.jpg" alt="John Wick" class="caratula"></a>
+                    <p class="p-texto">John Wick 3: Parabellum</p>
+                </div>
+                <div class="pelicula dos">
+                    <a href="sitio/pelicula/an2"><img src="../../static/imagenes/caratulas/animacion/dbz-golpedragon.png" alt="Dbz" class="caratula"></a>
+                    <p class="p-texto">Dragon Ball Z Golpe del Dragón</p>
+                </div>
+                <div class="pelicula tres">
+                    <a href="sitio/pelicula/h4"><img src="../../static/imagenes/caratulas/heroes/infinity-war.jpg" alt="Vengadores" class="caratula"></a>
+                    <p class="p-texto">Los Vengadores: Infinty War</p>
+                </div>
+                <div class="pelicula cuatro">
+                    <a href="sitio/pelicula/c1"><img src="../../static/imagenes/caratulas/comedia/Jumanji-En-la-selva-(2017).jpeg" alt="Jumanji" class="caratula"></a>
+                    <p class="p-texto">Jumanji</p>
+                </div>
+            </div>
+            <h2 class="subtitulo">Acción</h2>
+            <div class="accion">
+                {% for info in informacion %}
+                {% if info[2] == 'Acción' %}
+                <div class="pelicula uno">
+                    <a href="/sitio/pelicula/{{info[0]}}"><img src="data:image/jpg;base64,{{ info[4] }}" alt="Accion" class="caratula"></a>
+                    <p class="p-texto">{{info[1]}}</p>
+                </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+            <h2 class="subtitulo">Comedia</h2>
+            <div class="comedia">
+                {% for info in informacion %}
+                {% if info[2] == 'Comedia' %}
+                <div class="pelicula uno">
+                    <a href="/sitio/pelicula/{{info[0]}}"><img src="data:image/jpg;base64,{{ info[4] }}" alt="Comedia" class="caratula"></a>
+                    <p class="p-texto">{{info[1]}}</p>
+                </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+            <h2 class="subtitulo">Héroe</h2>
+            <div class="heroe">
+                {% for info in informacion %}
+                {% if info[2] == 'SuperHéroe' %}
+                <div class="pelicula uno">
+                    <a href="/sitio/pelicula/{{info[0]}}"><img src="data:image/jpg;base64,{{ info[4] }}" alt="Heroe" class="caratula"></a>
+                    <p class="p-texto">{{info[1]}}</p>
+                </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+            <h2 class="subtitulo">Animación</h2>
+            <div class="animacion">
+                {% for info in informacion %}
+                {% if info[2] == 'Animación' %}
+                <div class="pelicula uno">
+                    <a href="/sitio/pelicula/{{info[0]}}"><img src="data:image/jpg;base64,{{ info[4] }}" alt="Animación" class="caratula"></a>
+                    <p class="p-texto">{{info[1]}}</p>
+                </div>
+            {% endif %}
+            {% endfor %}
+            </div>
+        </main>
+        <!-- Pie de la página -->
+        <footer id="pie">
+        </footer>
+    </div>
+</body>
+</html>

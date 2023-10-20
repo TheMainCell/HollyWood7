@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{info[1]}} | HW7</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/estilos.css')}}">
+    <link rel="icon" href="../../../static/imagenes/favicon-32x32.png">
+</head>
+
+<body class="body-inicio">
+    <main>
+        <header class="contenedor-header">
+            <div class="navMenu">
+                <a href="/"><img src="../../../static/imagenes/navegacion/arrow_back.svg" class="back-principal actualApagado" id="cancelar-compra"></a>
+
+                <a href="/"><img src="../../../static/imagenes/navegacion/home.svg" alt="" class="casita-principal actualApagado"></a>
+
+                <a href="/sitio/configuracion"><img src="../../../static/imagenes/navegacion/settings.svg" alt="" class="configuracion-principal actualApagado"></a>
+            </div>
+            <!-- Logo -->
+            <div class="contenedor-logo">
+                <a href="/"><img src="../../../static/imagenes/logoFavicon/logo.png" alt="" class="logo-individual"></a>             
+            </div>
+        </header>
+        
+
+        <div class="contenedor-info">
+            <div class="imagenArriba">
+                <figure class="contenedor-a">
+                    <img src="data:image/jpg;base64,{{ info[4] }}" alt="" class="imagen">
+                </figure>
+            </div>
+            <div class="informacion-sobre-pelicula">
+                <div class="info">
+                    <h4 class="titulo-pelicula">{{info[1]}}</h4>
+                    <h3 class="sub-temas">Sinopsis:</h3>
+                    <p class="texto">{{info[3]}}</p>
+                    <h3 class="sub-temas">Genero:</h3>
+                    <p class="texto">{{info[2]}}</p>
+                    <h3 class="sub-temas">Clasificacion:</h3>
+                    <p class="texto">{{info[11]}}</p>
+                    <h3 class="sub-temas">Protagonistas:</h3>
+                    <p class="texto">{{info[12]}}</p>
+                    <h3 class="sub-temas">Escritores:</h3>
+                    <p class="texto">{{info[13]}}</p>
+                </div>
+                 <div class="contenedor-trailerTicket">
+                        <button type="button" class="boton-trailer" id="boton-trailer"> Ver Trailer</button>
+                        <a href="/sitio/comprar"><button type="button" class="ver comprar">Comprar ticket</button></a>
+
+                    </div>
+                </div>
+            </div>                
+        </div>
+    </main>
+
+    <div class="modal-trailer" id="modal-trailer">
+        <div class="contenido-trailer" id="contenido-trailer">
+                <div class="cerrar-trailer">
+                    <p class="boton-cerrar" id="boton-cerrar">X</p>
+                </div>
+            <div class="contenedor-trailer-titulo">
+                <h3 class="titulo-trailer">{{info[1]}}</h3>
+                <iframe src="{{info[10]}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="video"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='js/trailer.js')}}"></script>
+</body>
+</html>

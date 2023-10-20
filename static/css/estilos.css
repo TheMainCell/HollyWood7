@@ -1,0 +1,1413 @@
+﻿
+* {
+    box-sizing: border-box;
+}
+
+/* Inicio de sesión*/
+
+.logo_inicial {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-sesion {
+    margin-top: 10px;
+    border-radius: 50%;
+    background-color: white;
+    width: 130px;
+}
+
+.contenedor_tique {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contenedor_formulario {
+    display: flex;
+    justify-content: center;
+    bottom: 100px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+} 
+
+
+.fondo_formulario {
+    background-color: rgba(whitewhite, white, white, .5);
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    border-radius: 9px;
+    padding: 0px 70px;
+    font-size: 20px;
+}
+
+.titulo-inicioSesion {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.usuario, .contraseña {
+    color: #fff;
+    font-size: .9em;
+    transition: 0.8s all;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid rgb(44, 44, 44);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.contraseña {
+    margin-top: 50px;
+}
+
+.usuario::placeholder, .contraseña::placeholder {
+    color: #ffffffa6;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.usuario:focus, .contraseña:focus {
+    border-bottom: 1px solid #026ae0;;
+}
+
+
+.sesion {
+    color: rgb(216, 216, 216);
+    background: #026ae0;
+    border-radius: 2px;
+    border: 0;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sesion:hover {
+    color: #fff;
+    background-color: #024da1;
+}
+
+
+.registro, .olvide {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+}
+
+.registro:hover, .olvide:hover {
+    color:  #1b71d3;
+    transition: 0.3s;
+}
+
+.barrita-registro {
+    color: #fff;
+}
+
+#contenedor-fueraFooter {
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer-index {
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+    height: 150px;
+    width: 500px;
+    margin-top: 17px; 
+}
+
+
+.contenedor-svg {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+svg {   
+    height: 25px;
+}
+
+
+.contenedor-footer:hover {
+    color: #7018fc;
+    transition: all .9s;
+}
+
+.texto-footer {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.powered {
+    display: flex;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor-powered {
+    font-size: 8px;
+    text-transform:none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+}
+
+/* Registrar */
+                                           
+.fondo_registro {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   margin: 0 auto;
+}
+
+.campo-registro {
+    color: #fff;
+    transition: 0.8s all;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    width: 50%;
+    border-bottom: 1px solid rgb(44, 44, 44);
+    margin-top: 20px;
+    cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .9em;
+    transition: 0.8s all;
+}
+
+.campo-registro::placeholder {
+    color: #ffffffa6;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}
+
+.campo-registro:focus {
+    border-bottom: 1px solid #026ae0;;
+}
+
+.sesion-registro {
+     color: rgb(216, 216, 216);
+    background: #026ae0;
+    border-radius: 2px;
+    border: 0;
+    height: 40px;
+    width: 350px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+.sesion-registro:hover {
+    color: #fff;
+    background-color: #024da1;
+    transition: 0.3s;
+}
+
+.titulo-registro {
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: #fff;
+}
+
+.registroApagado {
+    color: rgba(255, 255, 255, 0.363);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.8s;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: not-allowed;
+}
+
+.logo-registro {
+    display: flex;
+    justify-content: center;
+}
+
+
+#contenedor-arrowRegistro {
+    width: 70px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.ft-registro {
+    margin-top: 1px;
+}
+
+/* AGREGAR PELICULA */
+
+.body_agregar_pelicula {
+    background-color: black;
+}
+
+.contenedor_header_agregar {
+    height: 250px;
+}
+
+.logo_agregar {
+    border: 3px solid white;
+    width: 230px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.contenedor_header_agregar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_agregar_pelicula {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.ajustar_contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    border-radius: 20px;
+    width: 500px;
+    height:200px ;
+}
+
+.primera_tres {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 40px;
+}
+
+.nombre_agregar_pelicula {
+    border: none;
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    margin: 10px 10px;
+}
+
+.genero_agregar_pelicula {
+   border: none;
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    margin: 10px 10px;
+}
+
+.clasificacion_agregar_pelicula {
+    border: none;
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    margin: 10px 10px;
+}
+
+.escritor_agregar_pelicla {
+    border: none;
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    margin: 10px 10px;
+}
+
+.protagonista_agregar_pelicula {
+    border: none;
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    margin: 10px 10px;
+}
+
+.sinopsis_agregar_pelicula {
+    border: none;
+    background-color: black;
+    border-radius: 9px;
+    padding: 10px;
+    color: white;
+    margin: 10px 10px;
+}
+
+.botones_agregar_pelicula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+}
+
+.boton_agregar {
+    background-color: black;
+    border-radius: 20px;
+    margin: 30px 40px;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+.boton_agregar:hover {
+    background-color: dodgerblue ;
+    transition: 0.5s;
+}
+
+.boton_portada {
+    background-color: black;
+    border-radius: 20px;
+    margin: 30px 40px;
+    border: none;
+    transition: .4s;
+    cursor: pointer;
+    display: block;
+}
+
+.boton_portada:hover {
+    background-color: dodgerblue ;
+    transition: 0.5s;
+}
+
+.guardar_imagen {
+    width: 80px;
+}
+
+.tabla_portada {
+    width: 80px;
+}
+
+/* MODAL DE AGREGAR PELICULA */
+
+.fondo_modal {
+   visibility: hidden;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto_guardar_pelicula {
+    color: white;
+    margin: 0px 30px;
+}
+
+.texto_guardar_portada {
+    color: white; 
+    margin: 0px 30px;  
+}
+
+.decripcion_agregar_pelicula {
+    display: flex;
+    justify-content: center;
+
+}
+
+.fondo_modal.active {
+    visibility: visible;
+}
+
+.contenedor_contenido {
+    background-color: rgb(51, 49, 49);
+    height: 250px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    color: white;
+}
+
+.cerrar_modal {
+    align-self: flex-end;
+    margin: 0px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    background-color: black;
+    border-radius: 3px;
+    width: 40px;
+    text-align: center;
+    transition: .1s;
+}
+
+.cerrar_modal:hover {
+    background-color: red;
+    transition: .1s;
+}
+
+.intorducir_portada {
+    padding: 20px;
+    margin: 0px 30px;
+    text-align: center;
+    background-color: grey;
+    border-radius: 9px;
+}
+
+.subir_archivo {
+    margin: 20px 0px;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.subir_archivo:hover {
+    background-color: dodgerblue;
+    color: white;
+    transition: .2s;
+}
+
+/* ADMIN */
+
+.body_admin {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 905px;
+}
+
+.header_admin  {
+    display: flex;
+    justify-content: center;
+}
+
+.logo_admin {
+    width: 340px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.contenedor_main_admin {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_agregar_eliminar {
+    display: flex;
+    justify-content: center;
+   
+    width: 430px;
+}
+
+.enlace-admin {
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    border-radius: 5px;
+}
+
+.enlace-admin:hover {
+    background-color: dodgerblue ;
+    transition: 0.5s;
+}
+
+.contenedor_main_admin h1 {
+    text-align: center;
+}
+
+.contenedor_main_admin p {
+    text-align: center;
+}
+
+.agregar_pelicula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 40px;
+}
+
+.agregar_portada_admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 40px;
+}
+
+
+/* Pantall principal */
+body {
+    background-color: #000;
+}
+
+.estrenos, .accion, .comedia, .heroe, .animacion {
+    display: flex;
+    /* flex-wrap: wrap; */
+    grid-area: estreno;
+    width: 100%;
+}
+
+
+
+.scroll-accion {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scroll-adelante {
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.scroll-atras {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.header-principal {
+    grid-area: cabeza;
+    background: url(../imagenes/the-batman-dc-darkness-4k-0o-1920x1080.jpg) no-repeat;
+    background-size: cover ;
+    background-position: center center;
+    height: 500px;
+}
+
+footer {
+    grid-area: pie;
+}
+
+.pelicula {
+    width: 400px;
+    margin-left: 50px;
+}
+
+.logo {
+    position: relative;
+    width: 50px;
+}
+
+.contenedor-logo {
+    display: flex;
+    text-align:end;
+}
+
+
+.imagen-logo {
+    right: -100px;
+    width: 175px;
+}
+
+.contenedor-menu .navMenu a, .botones-principal a {
+    text-decoration: none;
+}
+
+/* Submenu de categorias */
+
+.casita-principal, .configuracion-principal, .back-principal, .login-principal {
+    width: 40px;
+    transition: 0.5s;
+    color: #ffffff;
+}
+
+.login-principal {
+    line-height: 40px;
+    margin-top: 2px;
+}
+
+.lista-principal {
+    width: 50px;
+    height: 45px;
+}
+
+.casita-principal:hover, .configuracion-principal:hover, .back-principal:hover {
+    color: #fff;
+    border-bottom: 1px solid #1b71d3;
+    transition: 0.5s;
+}
+
+.desactivado:hover {
+    border-bottom: none;
+    cursor: not-allowed;
+}
+
+.ctg {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ctg a {
+    text-decoration: none;
+}
+
+.ctg .pelicula {
+    margin-top: 10px;
+}
+
+
+.actual {
+    border-bottom: 1px solid lightgray;
+}
+
+.actualApagado {
+    border-bottom: 1px solid #000;
+}
+
+.link-categorias {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.categorias {
+    display: inline-block;
+    position: relative;
+    padding: 0px;
+} 
+
+.categorias-content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+ .categorias-content a {
+    display: block;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.categorias:hover .categorias-content {
+    display: block;
+}
+
+.categorias-content a:hover {
+  color: #FFF;
+  background-color: #1b71d3ab;
+  transition: 0.4s;
+}
+
+.btn-categorias {
+    margin-top: 1px; 
+    border: 0;
+    background: 0;
+    color: #FFF;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+.caratula {
+    height: 400px;
+    width: 280px;
+}
+
+.titulo-pelicula, .sub-temas, .subtitulo, .p-texto {
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.subtitulo {
+    margin-top: 30px;
+}
+
+.casita-principal, .configuracion-principal {
+    width: 40px;
+}
+
+.subtitulo {
+    text-align: start;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+
+.p-texto {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.boton-principal {
+    padding: 10px;
+    position: relative;
+    margin-left: 4px;
+}
+
+
+/* PÁGINAS IDIVIDUALES */
+
+.contenedor-header {
+    align-items: center;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.logo-individual {
+    width: 40%;
+}
+
+.contenedor-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-info {
+    display: flex;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.contenedor-a {
+    display: flex;
+    width: 100%;
+}
+.contenedor-a { 
+    display: flex; 
+    width: 100%; 
+}
+
+button {
+    display: none;
+}
+.informacion-sobre-pelicula {
+    width: 700px;
+    
+}
+.info {
+    margin-left: 60px;
+    /* margin-top: 90px; */
+
+}
+
+.imagen {
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    align-items: start;
+    margin-left: 20px;
+}
+
+.navMenu a {
+    list-style: none;
+    margin: 0 30px;
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    transition: 1s;
+}
+
+.navMenu:hover a {
+    transition: 1s;
+}
+
+.boton-principal, .ver, .boton-trailer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.contenedor-trailerTicket {
+  
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .contenedor-trailerTicket button {
+    margin: 4px;
+ }
+
+  .contenedor-trailerTicket a {
+        text-decoration: none;
+    }
+
+.ver, .boton-trailer {
+    display: flex;
+    position: relative;
+    left: 17px;
+    top: 0;
+    height: 46px;
+    background-color: #1A1E27;
+    color: #fff;
+    border-radius: 15px;
+    transition: 0.2s all;
+    cursor: pointer;
+    align-items: center;
+} 
+
+
+.ver:hover, .boton-trailer:hover {
+    background-color: #024da1;
+    transition: .2s all;
+    text-decoration: underline;
+}
+
+.botones-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65%;
+} 
+
+.boton-principal {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #1A1E27;
+    color: #fff;
+    border-radius: 15px;
+    transition: 0.2s all;
+    cursor: pointer;
+}
+
+
+.boton-principal:hover {
+    background-color: #024da1;
+    transition: .2s all;
+    text-decoration: underline;
+}
+
+.texto, .sub-temas, .titulo-pelicula {
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+.texto {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.titulo-pelicula {
+    font-size: 28px;
+    line-height: 28px;
+}
+
+
+
+/* MODAL PARA TRAILERS */
+.modal-trailer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.modal-trailer.active {
+    visibility: visible;
+}
+
+.contenido-trailer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+    height: 60%;
+    background-color: rgba(20, 21, 22, 1);
+    margin: 10% auto;
+    border: 0;
+    border-radius: 25px;
+    opacity: 0;
+    transition: ease-in-out 0.2s all;
+}
+
+.contenido-trailer.active {
+    opacity: 1;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+
+.cerrar-trailer {
+    align-self: flex-end;
+    margin-right: 30px;
+    height: 0px;
+}
+
+.cerrar-trailer > p {
+    color: #fff;
+    font-size: 22px;
+    background: #1A1E27;
+    padding: 5px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.cerrar-trailer > p:hover {
+    color: red;
+    background-color: #2b2b2c;
+    transition: 0.2s all;
+}
+
+.contenedor-trailer-titulo {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 95%;
+}
+
+.titulo-trailer {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Comprar */
+
+#cuerpo-comprar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000; 
+    height: 600px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dia-select,.idioma-select, .contenedor-tarjeta-comprar input {
+    border-radius: 10px;
+}
+
+.cabeza-comprar{
+    display: none;
+}
+
+.contenedor-general-comprar {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.selecciones-comprar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dia-comprar {
+    margin-right: 20px;
+}
+
+.label-comprar, h2, h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.horario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horario label {
+    margin-left: 10px;
+}
+
+.metodos-pago-comprar {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    justify-content: space-evenly;
+}
+
+.metodos-pago-comprar input {
+    background-color: #505257;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+}
+
+.dia-select option, .idioma-select option {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #000;
+    color: white;
+}
+
+.dia-select, .idioma-select {
+    background-color: #505257;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.primera-compra {
+    margin-left: 30px;
+}
+
+.contenedor-tarjeta-comprar {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-tarjeta-comprar img {
+    width: 15%;
+}
+
+.contenedor-tarjeta-compra input {
+    height: 40%;
+}
+
+.botones-comprar {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+
+.botones-comprar img {
+    width: 28px;
+}
+
+.botones-comprar p {
+    color: #fff;
+}
+
+#boton-comprar, .boton-cancelar-compra {
+    padding-right: 15px;
+    display: flex;
+    border-radius: 15px;
+    background: #1A1E27;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+    align-items: center;
+}
+
+#boton-comprar:hover, .boton-cancelar-compra:hover {
+    background-color: #2b2b2c;
+    transition: .2s all;
+    text-decoration: underline;
+}
+
+/* Modal compra */
+.modalito {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.4);
+    visibility: hidden;
+}
+
+.active-modal {
+    visibility: visible;
+}
+
+.contenido {
+    background-color: #202C3F;
+    margin: 15% auto;
+    border-radius: 25px;
+    width: 30%;
+    padding: 20px;
+    border: 1px solid #888;
+    transition: ease-in-out 0.2s all;
+    opacity: 0;
+    border: 0;
+}
+
+.contenido.active-modal {
+    opacity: 1;
+}
+
+.cerrar {
+    margin: 0 auto;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 15px;
+    background: #1A1E27;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    color: #fff;
+}
+
+.cerrar:hover {
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s all;
+    background-color: #2b2b2c;
+}
+
+.abrir {
+    margin-top: 20px;
+}
+
+.check {
+    display: flex;
+    margin: 0 auto;
+}
+
+
+.contenido h3, .contenido p{
+    color: #fff;
+    text-align: center;
+}
+
+/* ///////////////////////////////Responsive//////////////////////////////////// */
+
+@media screen and (max-width: 430px) {
+    .cuerpo-index {
+    /* Peliculas Principal */
+
+        width: 100%;
+    }
+
+    .header-principal {
+        height: 300px;
+        width: 95%;
+    }
+
+    .boton-principal {
+        width: 120px;
+        font-size: 12px;
+    }
+
+    .back-principal, .casita-principal, .configuracion-principal, .login-principal {
+        width: 30px;
+        line-height: 30px;
+    }
+
+    .contenedor-btn_cat {
+        display: none;
+    }
+
+    .contenedor-menu {
+        justify-content: flex-end;
+    }
+
+    .navMenu a {
+        margin: 0 10px;
+    }
+
+    .imagen-logo {
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 100px;
+    }
+    
+    .caratula {
+        width: 126px;
+        height: 152px;
+    }
+
+    .pelicula {
+        margin-left: 20px;
+    }
+
+    .p-texto {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .subtitulo {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    /* Comprar */
+
+    .cabeza-comprar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+    }
+
+    .contenedor-general-comprar {
+        height: 520px;
+    }
+
+    .logo-pago {
+        width: 50%;
+        border-radius: 100px;
+    }
+
+    #cuerpo-comprar {
+        display: flex;
+        height: 932px;
+        align-items: center;
+    }
+
+    .selecciones-comprar {
+        flex-direction: column;
+    }
+
+    .dia-comprar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .metodos-pago-comprar {
+        flex-wrap: wrap;
+        width: auto;
+        margin-top: 15px;
+    }
+    
+    .primera-compra {
+        margin-left: 0;
+    }
+
+    /* Peliculas Individuales Responsive */
+
+    .contenedor-info, .informacion-sobre-pelicula {
+        display: grid;
+    }
+
+    .contenedor-info {
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .imagenArriba, .contenedor-a, .informacion-sobre-pelicula {
+        height: 300px;
+        width: 250px;
+    }
+
+    .imagenArriba {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagen {
+        height: 100%;
+    }
+
+    .info {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .titulo-pelicula {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .sub-temas {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .contenedor-trailerTicket {
+        justify-content: flex-start;
+    }
+
+
+    /* Modal trailers */
+    .contenido-trailer {
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: 25%;
+    }
+}
+
+/* Tablet Responsive */
+
+@media screen and (max-width: 800px) {
+    /* Pantalla principal */
+    .caratula {
+        width: 200px;
+        height: 250px;
+    }
+
+    /* Pantallas individuales */
+    .contenedor-info, .informacion-sobre-pelicula {
+        display: grid;
+    }
+
+    .contenedor-info {
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .imagenArriba, .contenedor-a, .informacion-sobre-pelicula {
+        height: 500px;
+        width: 350px;
+    }
+
+    .imagenArriba {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imagen {
+        height: 100%;
+    }
+
+    .info {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .titulo-pelicula {
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .sub-temas {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}

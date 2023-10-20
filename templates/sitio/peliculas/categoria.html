@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Acción | HW7</title>
+    <link rel="stylesheet" href="../../../static/css/estilos.css">
+    <link rel="icon" href="../../imagenes/logoFavicon/favicon-32x32.png">
+</head>
+
+<body class="body">
+    <main>
+        <header class="contenedor-header">
+
+            <div class="navMenu">
+                <a href="/"><img src="../../../static/imagenes/navegacion/arrow_back.svg" class="back-principal actualApagado"></a>
+
+                <a href="/"><img src="../../../static/imagenes/navegacion/home.svg" alt="" class="casita-principal actualApagado"></a>
+
+                <div class="categorias">
+                    <div class="contenedor-btn_cat.">
+                                <!-- <input class="btn-categorias" type="button" value="Categorias"> -->
+                        <img src="../../../static/imagenes/navegacion/categorias.svg" alt="" class="lista-principal actual">
+                    </div>
+                    <div class="categorias-content"> 
+                        <a href="/sitio/accion" class="link-categorias">Accion</a> 
+                        <a href="/sitio/animacion" class="link-categorias">Animacion</a> 
+                        <a href="/sitio/comedia" class="link-categorias">Comedia</a>
+                        <a href="/sitio/heroe" class="link-categorias">Heroes</a>
+                    </div>
+                </div>
+
+                <a href="../../configuracion.html"><img src="../../navegacion/settings.svg" alt="" class="configuracion-principal actualApagado"></a>
+            </div>
+
+            <div class="contenedor-logo">
+                <a href="/"><img src="../../../static/imagenes/logoFavicon/logo.png" alt="" class="logo-individual"></a>             
+            </div>
+        </header>
+        
+        <div id="ir_accion"><h2 class="subtitulo">Accion</h2></div>
+            <div class="accion ctg">
+                {% for ctg in info %}
+                <div class="pelicula uno">
+                    <a href="/sitio/pelicula/{{ctg[0]}}"><img src="data:image/jpg;base64,{{ ctg[4] }}" alt="{{ctg[2]}}" class="caratula">
+                    <p class="p-texto">{{ctg[1]}}</p>
+                </div>
+                {% endfor %}
+            </div>
+    </main>
+
+</body>
+
+</html>
